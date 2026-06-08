@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资讯分享 - 圣链健康 Arkect Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-content"><div class="loader-spinner"></div><span>ARKECT HEALTH</span></div></div>
+  <nav class="navbar" data-transparent>
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">A</div>
+        
+          <span class="brand-en">ARKECT HEALTH</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">首页</a><a href="about.html">关于我们</a>
+        <div class="nav-dropdown"><a href="services.html">我们的服务</a><div class="dropdown-menu"><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div></div>
+        <a href="resources.html">医疗资源</a><a href="cases.html" class="active">资讯分享</a><a href="process.html">问诊流程</a><a href="contact.html" class="btn btn-primary btn-sm nav-cta">预约咨询</a><span class="nav-lang">EN</span>
+      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="background-image: url('images/cases-hero.jpg'); background-size: cover; background-position: center 60%; position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(10,30,61,0.82) 0%, rgba(10,30,61,0.65) 50%, rgba(19,45,94,0.55) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="breadcrumb"><a href="index.html">首页</a><span class="separator">/</span><span class="current">资讯分享</span></div>
+      <span class="label">INSIGHTS & STORIES</span>
+      <h1>资讯<span>分享</span></h1>
+      <p>康复纪实、前沿资讯、英伦医讯与医疗科普，一站式获取权威医疗信息</p>
+    </div>
+  </section>
+
+  <!-- Main Tab Navigation -->
+  <section class="section" style="padding-bottom:0; padding-top:48px;">
+    <div class="container">
+      <div class="insights-tabs animate-on-scroll">
+        <button class="insights-tab-btn active" data-tab="recovery">
+          <svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+          康复纪实
+        </button>
+        <button class="insights-tab-btn" data-tab="frontier">
+          <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          医界前沿
+        </button>
+        <button class="insights-tab-btn" data-tab="uk-news">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+          英伦医讯
+        </button>
+        <button class="insights-tab-btn" data-tab="uk-knowledge">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          英伦医知
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 1: 康复纪实 ==================== -->
+  <div class="insights-tab-content active" id="tab-recovery">
+    <!-- Filter -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="case-filters animate-on-scroll">
+          <button class="case-filter-btn active" data-filter="all">全部案例</button>
+          <button class="case-filter-btn" data-filter="remote">远程问诊</button>
+          <button class="case-filter-btn" data-filter="uk-treatment">赴英看病</button>
+          <button class="case-filter-btn" data-filter="chronic">慢病管理</button>
+          <button class="case-filter-btn" data-filter="private">私人医生</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section class="section">
+      <div class="container">
+        <div class="case-grid">
+          <div class="case-card animate-on-scroll delay-1" data-category="remote">
+            <div class="case-image"><img src="images/case-lung-cancer.jpg" alt="肺癌第二诊疗意见" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">远程问诊</div>
+            <h4>肺癌第二诊疗意见</h4>
+            <div class="case-meta"><span>肿瘤科</span><span>2025</span></div>
+            <p>一位55岁的肺癌患者，在国内获得了手术方案建议。通过圣链健康远程问诊，英国Royal Marsden医院肿瘤科主任提供了更精准的靶向治疗方案，避免了不必要的手术，目前患者病情稳定。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">2周</span><span class="result-label">从申请到会诊</span></div>
+              <div class="result-item"><span class="result-value">100%</span><span class="result-label">翻译准确率</span></div>
+            </div>
+          </div>
+          <div class="case-card animate-on-scroll delay-2" data-category="uk-treatment">
+            <div class="case-image"><img src="images/case-heart-disease.jpg" alt="罕见心脏病赴英治疗" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">赴英看病</div>
+            <h4>罕见心脏病赴英治疗</h4>
+            <div class="case-meta"><span>心血管科</span><span>2025</span></div>
+            <p>一位38岁的罕见心脏病患者，国内医院无法确诊。圣链健康为其匹配St Thomas' Hospital心血管中心专家，确诊为肥厚型心肌病，并成功实施微创手术，术后恢复良好。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">3周</span><span class="result-label">全程安排</span></div>
+              <div class="result-item"><span class="result-value">成功</span><span class="result-label">手术结果</span></div>
+            </div>
+          </div>
+          <div class="case-card animate-on-scroll delay-3" data-category="chronic">
+            <div class="case-image"><img src="images/case-diabetes.jpg" alt="糖尿病综合管理" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">慢病管理</div>
+            <h4>糖尿病综合管理</h4>
+            <div class="case-meta"><span>内分泌科</span><span>2025</span></div>
+            <p>一位62岁的2型糖尿病患者，血糖长期控制不佳。通过圣链健康慢病管理服务，专属私人医生制定个性化管理方案，结合英国内分泌专家远程会诊，6个月后HbA1c从9.2%降至6.8%。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">6.8%</span><span class="result-label">HbA1c达标</span></div>
+              <div class="result-item"><span class="result-value">6个月</span><span class="result-label">管理周期</span></div>
+            </div>
+          </div>
+          <div class="case-card animate-on-scroll delay-1" data-category="private">
+            <div class="case-image"><img src="images/case-family-health.jpg" alt="家族健康管理" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">私人医生</div>
+            <h4>家族健康管理</h4>
+            <div class="case-meta"><span>全科</span><span>2025</span></div>
+            <p>一个五口之家签约圣链健康私人医生服务，专属私人医生为每位家庭成员建立健康档案，定期体检、日常咨询、预防保健全覆盖。一年来成功预防两起潜在健康风险。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">5人</span><span class="result-label">家庭覆盖</span></div>
+              <div class="result-item"><span class="result-value">2起</span><span class="result-label">风险预防</span></div>
+            </div>
+          </div>
+          <div class="case-card animate-on-scroll delay-2" data-category="remote">
+            <div class="case-image"><img src="images/case-pediatric-neuro.jpg" alt="儿童神经系统疾病会诊" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">远程问诊</div>
+            <h4>儿童神经系统疾病会诊</h4>
+            <div class="case-meta"><span>神经科</span><span>2025</span></div>
+            <p>一位7岁儿童出现不明原因抽搐，国内检查未见异常。通过圣链健康远程会诊Great Ormond Street Hospital神经科专家，确诊为罕见癫痫类型，调整用药后症状完全控制。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">10天</span><span class="result-label">从申请到确诊</span></div>
+              <div class="result-item"><span class="result-value">零发作</span><span class="result-label">治疗结果</span></div>
+            </div>
+          </div>
+          <div class="case-card animate-on-scroll delay-3" data-category="uk-treatment">
+            <div class="case-image"><img src="images/case-joint-replacement.jpg" alt="关节置换手术" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+            <div class="case-tag">赴英看病</div>
+            <h4>关节置换手术</h4>
+            <div class="case-meta"><span>骨科</span><span>2025</span></div>
+            <p>一位70岁的严重膝关节退变患者，希望寻求英国顶尖骨科手术。圣链健康为其安排Wellington Hospital骨科专家，成功实施机器人辅助膝关节置换术，术后2周即可辅助行走。</p>
+            <div class="case-result">
+              <div class="result-item"><span class="result-value">2周</span><span class="result-label">术后恢复</span></div>
+              <div class="result-item"><span class="result-value">微创</span><span class="result-label">手术方式</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-navy">
+      <div class="container">
+        <div class="section-title light animate-on-scroll">
+          <span class="label">TESTIMONIALS</span>
+          <h2>客户<span>心声</span></h2>
+          <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll delay-1">
+            <div class="quote-mark">"</div>
+            <p>圣链健康帮我找到了最合适的英国专家，远程会诊给了我全新的治疗方案，避免了不必要的手术。翻译医生非常专业，沟通完全没有障碍。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">Z</div>
+              <div class="author-info"><strong>张先生</strong><span>肺癌患者 · 远程问诊</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll delay-2">
+            <div class="quote-mark">"</div>
+            <p>从签证到手术，圣链健康全程陪伴，让我们全家都非常安心。孩子在伦敦的治疗效果超出了我们的预期，感谢圣链健康的专业团队。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">L</div>
+              <div class="author-info"><strong>李女士</strong><span>患儿母亲 · 赴英看病</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll delay-3">
+            <div class="quote-mark">"</div>
+            <p>签约私人医生服务一年了，全家人的健康都有了保障。私人医生非常负责，每次咨询都很耐心，真正做到了'亚洲首家英式医疗资源整合平台'。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">W</div>
+              <div class="author-info"><strong>王先生</strong><span>企业高管 · 私人医生服务</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 2: 医界前沿 ==================== -->
+  <div class="insights-tab-content" id="tab-frontier">
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="label">MEDICAL FRONTIERS</span>
+          <h2>医界<span>前沿</span></h2>
+          <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+          <p>追踪全球最新医学突破，掌握前沿诊疗技术动态</p>
+        </div>
+        <div class="article-grid">
+          <div class="article-card article-featured animate-on-scroll delay-1">
+            <div class="article-image">
+              <div class="article-image-placeholder"><svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></div>
+            </div>
+            <div class="article-content">
+              <div class="article-tags"><span class="article-tag">肿瘤免疫</span><span class="article-tag">前沿疗法</span></div>
+              <h3>英国CAR-T细胞疗法新突破：血液肿瘤缓解率提升至90%</h3>
+              <p>英国Royal Marsden医院联合UCL癌症研究所发布最新临床试验结果，新一代CAR-T细胞疗法在复发/难治性淋巴瘤患者中实现了90%的整体缓解率，较传统方案提升近30%。该研究已发表于《新英格兰医学杂志》，为血液肿瘤治疗开辟了全新路径。</p>
+              <div class="article-meta"><span class="article-date">2025年12月</span><span class="article-source">来源：Royal Marsden Hospital</span></div>
+            </div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">基因治疗</span></div>
+            <h4>CRISPR基因编辑首次用于遗传性心脏病治疗</h4>
+            <p>伦敦King's College Hospital成功完成全球首例体内CRISPR基因编辑治疗肥厚型心肌病的临床试验，患者术后心功能显著改善。</p>
+            <div class="article-meta"><span class="article-date">2025年11月</span><span class="article-source">来源：King's College Hospital</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">AI医疗</span></div>
+            <h4>牛津大学AI诊断系统可将早期胰腺癌检出率提高40%</h4>
+            <p>牛津大学医学院开发的新型AI辅助诊断系统，通过分析常规CT影像，可在胰腺癌早期阶段识别微小病灶，检出率较传统方法提高40%。</p>
+            <div class="article-meta"><span class="article-date">2025年10月</span><span class="article-source">来源：University of Oxford</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-1">
+            <div class="article-tags"><span class="article-tag">神经科学</span></div>
+            <h4>帝国理工研发帕金森病早期生物标志物检测面板</h4>
+            <p>帝国理工学院团队开发出一种基于血液的帕金森病早期检测面板，可在症状出现前5-8年识别高风险人群，准确率达85%。</p>
+            <div class="article-meta"><span class="article-date">2025年9月</span><span class="article-source">来源：Imperial College London</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">微创手术</span></div>
+            <h4>英国机器人辅助手术年度报告：术后恢复时间缩短50%</h4>
+            <p>英国皇家外科学院发布年度报告，机器人辅助手术在英国各大医院的应用率持续增长，患者术后平均恢复时间较传统开放手术缩短50%。</p>
+            <div class="article-meta"><span class="article-date">2025年8月</span><span class="article-source">来源：Royal College of Surgeons</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">精准医学</span></div>
+            <h4>剑桥大学个性化癌症疫苗进入III期临床试验</h4>
+            <p>剑桥大学Addenbrooke's医院启动个性化mRNA癌症疫苗的III期临床试验，针对黑色素瘤患者，根据个体肿瘤突变谱定制疫苗方案。</p>
+            <div class="article-meta"><span class="article-date">2025年7月</span><span class="article-source">来源：University of Cambridge</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 3: 英伦医讯 ==================== -->
+  <div class="insights-tab-content" id="tab-uk-news">
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="label">UK HEALTH NEWS</span>
+          <h2>英伦<span>医讯</span></h2>
+          <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+          <p>聚焦英国医疗行业动态，洞悉政策与市场变化</p>
+        </div>
+        <div class="article-grid">
+          <div class="article-card article-featured animate-on-scroll delay-1">
+            <div class="article-image">
+              <div class="article-image-placeholder"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg></div>
+            </div>
+            <div class="article-content">
+              <div class="article-tags"><span class="article-tag">NHS改革</span></div>
+              <h3>NHS发布2025年十年计划：投资21亿英镑升级数字医疗基础设施</h3>
+              <p>英国国民医疗服务体系（NHS）正式发布2025年十年战略计划，核心内容包括：投资21亿英镑升级数字医疗基础设施、缩短专科转诊等待时间至4周以内、扩大AI辅助诊断覆盖范围。该计划被认为是NHS近30年来最深刻的变革。</p>
+              <div class="article-meta"><span class="article-date">2025年12月</span><span class="article-source">来源：NHS England</span></div>
+            </div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">私立医疗</span></div>
+            <h4>HCA Healthcare UK扩建伦敦旗舰医院，新增200张床位</h4>
+            <p>HCA Healthcare UK宣布将在伦敦市中心扩建其旗舰医院，新增200张床位及最先进的手术中心，预计2026年投入使用，进一步提升私立医疗接待能力。</p>
+            <div class="article-meta"><span class="article-date">2025年11月</span><span class="article-source">来源：HCA Healthcare UK</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">医疗签证</span></div>
+            <h4>英国更新医疗访客签证政策：简化赴英就医申请流程</h4>
+            <p>英国内政部宣布简化医疗访客签证（Medical Visitor Visa）申请流程，新增在线预审通道，审批时间缩短至5个工作日，方便国际患者赴英就医。</p>
+            <div class="article-meta"><span class="article-date">2025年10月</span><span class="article-source">来源：UK Home Office</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-1">
+            <div class="article-tags"><span class="article-tag">药品审批</span></div>
+            <h4>MHRA加速审批创新药物，2025年批准创新药数量创历史新高</h4>
+            <p>英国药品和医疗保健产品监管局（MHRA）报告显示，2025年共批准68款创新药物上市，创历史新高，其中肿瘤和罕见病药物占比超过60%。</p>
+            <div class="article-meta"><span class="article-date">2025年9月</span><span class="article-source">来源：MHRA</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">医学教育</span></div>
+            <h4>英国 GMC 新规：海外医生注册流程将进一步简化</h4>
+            <p>英国医学总会（GMC）宣布将简化国际医学毕业生注册流程，新增多国学历互认机制，预计将显著缩短海外医生在英国执业的准入时间。</p>
+            <div class="article-meta"><span class="article-date">2025年8月</span><span class="article-source">来源：General Medical Council</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">中英合作</span></div>
+            <h4>中英医学交流峰会：推动精准医疗领域深度合作</h4>
+            <p>第12届中英医学交流峰会在伦敦举行，两国签署多项合作协议，涵盖精准医疗、远程医疗和临床试验等领域，为中英医疗合作注入新动力。</p>
+            <div class="article-meta"><span class="article-date">2025年7月</span><span class="article-source">来源：British Medical Journal</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 4: 英伦医知 ==================== -->
+  <div class="insights-tab-content" id="tab-uk-knowledge">
+    <section class="section">
+      <div class="container">
+        <div class="section-title animate-on-scroll">
+          <span class="label">UK MEDICAL INSIGHTS</span>
+          <h2>英伦<span>医知</span></h2>
+          <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+          <p>深入了解英国医疗体系，掌握海外就医必备知识</p>
+        </div>
+        <div class="article-grid">
+          <div class="article-card article-featured animate-on-scroll delay-1">
+            <div class="article-image">
+              <div class="article-image-placeholder"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg></div>
+            </div>
+            <div class="article-content">
+              <div class="article-tags"><span class="article-tag">医疗体系</span><span class="article-tag">入门必读</span></div>
+              <h3>一文读懂英国医疗体系：NHS与私立医疗全解析</h3>
+              <p>英国医疗体系由国民医疗服务（NHS）和私立医疗两大板块构成。NHS提供全民免费医疗，但面临等待时间长、资源紧张等挑战；私立医疗以HCA、Bupa为代表，提供快速就诊、专属医生和高端设施。国际患者通常选择私立医疗路径，从初诊到治疗可在1-2周内完成。了解两大体系的特点与衔接方式，是赴英就医的第一步。</p>
+              <div class="article-meta"><span class="article-date">2025年12月</span><span class="article-source">圣链健康原创</span></div>
+            </div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">GP制度</span></div>
+            <h4>英国全科医生（GP）制度详解：如何预约、转诊与获取处方</h4>
+            <p>英国实行严格的GP首诊制，所有非急诊就医需先经GP评估。本文详解GP预约方式、转诊流程、处方获取及留学生注册指南。</p>
+            <div class="article-meta"><span class="article-date">2025年11月</span><span class="article-source">圣链健康原创</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">肿瘤治疗</span></div>
+            <h4>英国癌症治疗路径：MDT多学科会诊模式详解</h4>
+            <p>英国肿瘤治疗以MDT（多学科团队）会诊为核心，由外科、肿瘤内科、放疗科、病理科等多领域专家共同制定治疗方案，确保每位患者获得最优治疗策略。</p>
+            <div class="article-meta"><span class="article-date">2025年10月</span><span class="article-source">圣链健康原创</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-1">
+            <div class="article-tags"><span class="article-tag">亚型疾病</span></div>
+            <h4>英国罕见病诊疗体系：从基因诊断到精准治疗</h4>
+            <p>英国是全球罕见病诊疗的领先者，拥有欧洲最大的罕见病转诊网络。本文介绍英国罕见病的诊断流程、基因检测技术和多中心协作治疗模式。</p>
+            <div class="article-meta"><span class="article-date">2025年9月</span><span class="article-source">圣链健康原创</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-2">
+            <div class="article-tags"><span class="article-tag">就医指南</span></div>
+            <h4>赴英就医全攻略：签证、费用、翻译与注意事项</h4>
+            <p>从医疗访客签证申请、治疗费用预估、医学翻译安排到在英生活指南，一文汇总赴英就医所需了解的全部信息与实用建议。</p>
+            <div class="article-meta"><span class="article-date">2025年8月</span><span class="article-source">圣链健康原创</span></div>
+          </div>
+          <div class="article-card animate-on-scroll delay-3">
+            <div class="article-tags"><span class="article-tag">药物差异</span></div>
+            <h4>中英药物差异知多少：常见药物的名称、剂量与使用差异</h4>
+            <p>中英两国在药物审批、命名体系和剂量标准上存在显著差异。本文梳理常见药物的对应关系、剂量差异及注意事项，帮助跨境就医患者安全用药。</p>
+            <div class="article-meta"><span class="article-date">2025年7月</span><span class="article-source">圣链健康原创</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="cta-section" style="background-image: url('images/cta-cases-bg.jpg'); background-size: cover; background-position: center 60%; position: relative;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(10,30,61,0.88) 0%, rgba(10,30,61,0.75) 50%, rgba(19,45,94,0.65) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="cta-content animate-on-scroll">
+        <h2>您也可以成为<span>下一个</span>成功案例</h2>
+        <p>立即预约咨询，让我们为您精准匹配最合适的英国顶级医生</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">预约免费咨询</a>
+          <a href="process.html" class="btn btn-outline btn-lg">了解问诊流程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">A</div><span class="brand-text">ARKECT HEALTH</span></div><p>圣链健康成立于2019年，亚洲首家全球医疗精准匹配平台。</p></div>
+        <div class="footer-col"><h5>关于我们</h5><a href="about.html">公司简介</a><a href="resources.html">医疗资源</a><a href="cases.html">资讯分享</a></div>
+        <div class="footer-col"><h5>我们的服务</h5><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div>
+        <div class="footer-col"><h5>快速链接</h5><a href="process.html">问诊流程</a><a href="contact.html">联系我们</a></div>
+        <div class="footer-qr-group"><div class="footer-qr"><img src="images/qrcode-official.png" alt="微信公众号"><span>微信公众号</span></div><div class="footer-qr"><img src="images/qrcode-video.png" alt="视频号"><span>视频号</span></div></div>
+      </div>
+      <div class="footer-locations">
+        <div class="footer-location"><div class="loc-flag">🇬🇧</div><div class="loc-info"><h6>伦敦总部</h6><p>London, UK<br>enquiries@arkect.co.uk</p></div></div>
+        <div class="footer-location"><div class="loc-flag">🇨🇳</div><div class="loc-info"><h6>北京总部</h6><p>Beijing, China<br>enquiries@arkect.co.uk</p></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2019-2026 Arkect Health 圣链健康. All Rights Reserved.</span><div class="footer-links"><a href="#">隐私政策</a><a href="#">数据保护</a><a href="#">使用条款</a></div></div>
+    </div>
+  </footer>
+  <div class="floating-consult">
+    <div class="floating-btn wechat"><svg viewBox="0 0 24 24"><path d="M8.5 11c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm5 0c.83 0 1.5-.67 1.5-1.5S14.33 8 13.5 8 12 8.67 12 9.5s.67 1.5 1.5 1.5zM12 2C6.48 2 2 5.94 2 10.73c0 3.07 1.76 5.77 4.49 7.37L5 21.5l4.47-2.27c.81.19 1.66.29 2.53.29 5.52 0 10-3.94 10-8.79S17.52 2 12 2z"/></svg><div class="wechat-popup">
+        <div class="popup-title">扫码联系圣链健康</div>
+        <div class="qr-grid">
+          <div class="qr-item">
+            <div class="qr-box">
+              <img src="images/qrcode-official.png" alt="官方公众号" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4z"/></svg><span>公众号二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方公众号</strong>扫码关注</div>
+          </div>
+          <div class="qr-item">
+            <div class="qr-box">
+              <img src="images/qrcode-service.png" alt="官方客服" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg><span>客服二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方客服</strong>扫码添加</div>
+          </div>
+        </div>
+      </div></div>
+    <a href="contact.html" class="floating-btn consult"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+    <div class="floating-btn top"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
