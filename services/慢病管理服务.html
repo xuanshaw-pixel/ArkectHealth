@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宁养计划 | 圣链健康</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      background: #fff;
+      color: #1e2a3e;
+      line-height: 1.5;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+    /* 导航栏 */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid #eef2f6;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Noto Serif SC', serif;
+      color: #0a2540;
+    }
+    .logo span { color: #c6a43f; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2c3e4e;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #c6a43f; }
+    .btn-outline {
+      border: 1px solid #c6a43f;
+      padding: 8px 24px;
+      border-radius: 40px;
+      color: #c6a43f;
+      background: transparent;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: #c6a43f; color: white; }
+
+    /* Hero 视觉区（带图片占位） */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding: 60px 0;
+      flex-wrap: wrap;
+    }
+    .hero-content { flex: 1.2; }
+    .hero-content .pre-title {
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: #c6a43f;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-family: 'Noto Serif SC', serif;
+      color: #0a2540;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #4a5b6e;
+      margin-bottom: 32px;
+    }
+    .btn-group { display: flex; gap: 20px; flex-wrap: wrap; }
+    .btn-primary {
+      background: #0a2540;
+      color: white;
+      padding: 12px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #c6a43f; color: #0a2540; }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #cbd5e1;
+      padding: 12px 36px;
+      border-radius: 40px;
+      font-weight: 600;
+      color: #1e2a3e;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-secondary:hover { border-color: #c6a43f; background: #fef9e6; }
+    .hero-image {
+      flex: 1;
+      height: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #f0f3f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8ba0bc;
+      font-size: 0.9rem;
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* 引言区域 */
+    .quote-block {
+      background: #f8fafc;
+      border-radius: 32px;
+      padding: 48px 40px;
+      margin: 40px 0 60px;
+      text-align: center;
+    }
+    .quote-block p {
+      font-size: 1.2rem;
+      font-family: 'Noto Serif SC', serif;
+      color: #0a2540;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .quote-tag {
+      margin-top: 24px;
+      font-weight: 500;
+      color: #c6a43f;
+      letter-spacing: 1px;
+    }
+
+    /* 通用区 */
+    .section-title {
+      font-size: 2rem;
+      font-family: 'Noto Serif SC', serif;
+      text-align: center;
+      margin: 80px 0 40px;
+      color: #0a2540;
+    }
+    .section-sub {
+      text-align: center;
+      color: #6c7a8a;
+      max-width: 700px;
+      margin: -30px auto 50px;
+    }
+
+    /* 卡片网格（图片占位 + 文字） */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid #eef2f8;
+      border-radius: 32px;
+      padding: 0;
+      overflow: hidden;
+      transition: all 0.2s;
+    }
+    .info-card:hover { border-color: #c6a43f60; }
+    .card-img {
+      height: 220px;
+      background: #eef2f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8ba0bc;
+      font-size: 0.85rem;
+    }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-content { padding: 28px 24px 32px; }
+    .card-content h3 { font-size: 1.5rem; margin-bottom: 12px; }
+    .card-content p { color: #4a5b6e; margin-bottom: 16px; }
+    .card-tag {
+      display: inline-block;
+      background: #f0f3f7;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      color: #c6a43f;
+    }
+
+    /* 服务清单（交互式手风琴） */
+    .accordion {
+      background: #fff;
+      border-radius: 28px;
+      margin: 30px 0;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #eef2f6;
+      overflow: hidden;
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: background 0.2s;
+    }
+    .accordion-header:hover { background: #fafbfc; }
+    .accordion-header i:first-child {
+      color: #c6a43f;
+      width: 32px;
+      font-size: 1.2rem;
+    }
+    .accordion-header span { flex: 1; margin-left: 12px; }
+    .accordion-icon {
+      transition: transform 0.3s;
+      color: #c6a43f;
+    }
+    .accordion-content {
+      max-height: 0;
+      padding: 0 20px;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #4a5b6e;
+      line-height: 1.6;
+      background: #fefefe;
+    }
+    .accordion-content.show {
+      max-height: 500px;
+      padding: 0 20px 24px;
+    }
+    .service-detail-list {
+      list-style: none;
+      margin: 12px 0 0 32px;
+    }
+    .service-detail-list li {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .service-detail-list li i {
+      color: #c6a43f;
+      font-size: 0.8rem;
+      width: 20px;
+    }
+
+    /* 流程步骤 */
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin: 60px 0;
+    }
+    .step-item {
+      flex: 1;
+      background: #f8fafc;
+      border-radius: 28px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: #0a2540;
+      color: white;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0 auto 20px;
+    }
+    .step-item h3 { margin-bottom: 12px; }
+    .step-item p { color: #5d6f83; font-size: 0.9rem; }
+
+    /* 权益卡片 */
+    .rights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin: 50px 0;
+    }
+    .right-item {
+      text-align: center;
+      padding: 24px;
+      border: 1px solid #eef2f8;
+      border-radius: 28px;
+    }
+    .right-num {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #c6a43f;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: #0a2540;
+      border-radius: 32px;
+      padding: 64px 48px;
+      text-align: center;
+      margin: 80px 0;
+      color: white;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .btn-cta-light {
+      background: white;
+      color: #0a2540;
+      padding: 12px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .privacy-note { font-size: 0.75rem; opacity: 0.7; margin-top: 24px; }
+
+    .footer {
+      border-top: 1px solid #eef2f6;
+      padding: 40px 0;
+      text-align: center;
+      color: #7c8b9c;
+    }
+
+    @media (max-width: 768px) {
+      .hero { flex-direction: column; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .rights { grid-template-columns: 1fr; }
+      .section-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="navbar">
+    <div class="logo">圣链<span>健康</span></div>
+    <div class="nav-links">
+      <a href="../index.html">首页</a>
+      <a href="#">关于我们</a>
+      <a href="../services.html">核心服务</a>
+      <a href="#">就医方式</a>
+      <a href="#">服务流程</a>
+      <a href="#">安全保障</a>
+      <a href="#">专家团队</a>
+      <a href="#">真实案例</a>
+      <a href="#" class="btn-outline">免费咨询</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="pre-title">Arkect Serenity Programme</div>
+      <h1>宁养计划</h1>
+      <p>专属慢病管理 · 全球顶尖医疗资源 · 个性化健康支持</p>
+      <div class="btn-group">
+        <a href="#" class="btn-primary">免费健康评估</a>
+        <a href="#" class="btn-secondary">了解计划详情</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=600&fit=crop" alt="高端医疗 · 宁养计划">
+    </div>
+  </div>
+
+  <!-- 引言 -->
+  <div class="quote-block">
+    <p>从精准的健康评估到量身定制的治疗方案，我们的专家团队始终为您提供最专业、最细致的服务。无论是首次深度问诊，还是持续的健康管理，我们都将陪伴您每一步。</p>
+    <div class="quote-tag">We Care, We Help, We Connect.</div>
+  </div>
+
+  <!-- 宁养计划价值 + 图片占位（两个卡片，带图） -->
+  <div class="grid-2">
+    <div class="info-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa2cc6813b8e?w=600&h=400&fit=crop" alt="健康评估">
+      </div>
+      <div class="card-content">
+        <h3>个性化精准健康方案</h3>
+        <p>随着全球慢性病发病率持续攀升，高净值人群需要个性化、全方位的精准健康解决方案。</p>
+        <span class="card-tag">全周期管理</span>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba99971?w=600&h=400&fit=crop" alt="国际医疗资源">
+      </div>
+      <div class="card-content">
+        <h3>全球顶尖医疗资源</h3>
+        <p>圣链健康整合国际顶尖医疗资源，覆盖高血压、高血糖、高血脂等慢病的国际化管理。</p>
+        <span class="card-tag">点对点服务</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 慢性疾病管理服务内容（交互式手风琴，基于PDF详细清单） -->
+  <h2 class="section-title">慢性疾病管理服务内容</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-user-tie"></i><span>专属服务顾问精准对接</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>为每位客户配备一对一专属健康顾问，全天候响应客户需求，确保问题快速解决。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-folder-medical"></i><span>中英双语健康档案与用药史整理</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>以专业化标准整理客户病史和用药记录，生成详细的中英文健康档案，为诊疗奠定基础。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-calendar-alt"></i><span>2次免费专属预约服务</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>提供首次问诊及复诊的优先预约服务，确保客户快速获得医疗支持。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-stethoscope"></i><span>首次英国权威医生深度问诊</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>对接英国资深医疗团队，为客户进行全方位健康评估并制定初步健康管理方案。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-notes-medical"></i><span>单次英国权威医生精准复诊</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>根据客户健康管理进展，提供针对性复诊建议，优化健康管理策略。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-language"></i><span>英国中英双语医生口译服务（2次）</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>专业医疗翻译支持的双语沟通，确保与英国医生无障碍交流。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-file-alt"></i><span>中英双版本问诊报告（2份）</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>详尽的中英文诊断与建议报告，便于后续管理和执行。</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <i class="fas fa-chart-line"></i><span>后续跟踪管理服务</span>
+        <i class="fas fa-chevron-down accordion-icon"></i>
+      </div>
+      <div class="accordion-content">
+        <p>长期健康监测和动态方案调整，确保客户健康目标持续实现。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 服务期限 & 增值服务（视觉效果统一） -->
+  <div style="background: #f8fafc; border-radius: 28px; padding: 36px 28px; margin: 40px 0;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 32px;">
+      <div><strong style="color:#c6a43f">服务期限</strong><br>6个月（可升级至一年）</div>
+      <div><strong style="color:#c6a43f">服务形式</strong><br>线上 · 线下 · 线上线下混合</div>
+      <div><strong style="color:#c6a43f">服务人群</strong><br>单一慢性疾病客户 / 高净值预防人群</div>
+      <div><strong style="color:#c6a43f">增值服务</strong><br>后续跟踪对接医生服务(3次) · 无限次医疗翻译 · 购药协助</div>
+    </div>
+  </div>
+
+  <!-- 服务流程（7步，可稍概括） -->
+  <h2 class="section-title">服务流程</h2>
+  <div class="steps">
+    <div class="step-item"><div class="step-number">1</div><h3>初步咨询评估</h3><p>VIP专线，了解健康状况</p></div>
+    <div class="step-item"><div class="step-number">2</div><h3>健康档案整理</h3><p>中英双语病史/用药史</p></div>
+    <div class="step-item"><div class="step-number">3</div><h3>首次深度问诊</h3><p>英国权威医生+翻译服务</p></div>
+    <div class="step-item"><div class="step-number">4</div><h3>精准复诊</h3><p>优化管理策略</p></div>
+    <div class="step-item"><div class="step-number">5</div><h3>报告交付</h3><p>中英双版本问诊报告</p></div>
+    <div class="step-item"><div class="step-number">6</div><h3>长期跟踪</h3><p>动态调整方案</p></div>
+  </div>
+
+  <!-- 客户权益与保障 -->
+  <h2 class="section-title">客户权益与保障</h2>
+  <div class="rights">
+    <div class="right-item"><div class="right-num">01</div><h4>尊贵权益</h4><p>优先享受全球顶尖专家问诊，专属客户经理全程服务</p></div>
+    <div class="right-item"><div class="right-num">02</div><h4>隐私与安全保障</h4><p>数据与隐私保护符合国际医疗标准，无后顾之忧</p></div>
+    <div class="right-item"><div class="right-num">03</div><h4>结果导向</h4><p>持续带来健康价值与生活品质提升</p></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>开启您的宁养计划</h2>
+    <p>从精准评估到长期共管，让健康成为优质生活的基石</p>
+    <div class="cta-buttons">
+      <button class="btn-cta-light">免费咨询</button>
+      <button class="btn-cta-light" style="background:transparent; border:1px solid white; color:white;">预约专属顾问</button>
+    </div>
+    <div class="privacy-note">🔒 256位加密传输 · GDPR合规 · 隐私严格保密</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    圣链健康 | 伦敦 · 北京双总部 | 隐私声明 | 联系方式<br>
+    © 2025 圣链健康 保留所有权利
+  </div>
+</div>
+
+<script>
+  // 手风琴交互逻辑
+  document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector('.accordion-icon');
+      content.classList.toggle('show');
+      if (content.classList.contains('show')) {
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script>
+</body>
+</html>
