@@ -66,7 +66,14 @@
     <section class="section" style="padding-bottom:0;">
       <div class="container">
         <div class="case-filters animate-on-scroll" id="articleFilters-recovery">
-          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+<!-- BUILD:BEGIN:recovery-filters -->
+          <button class="case-filter-btn active" data-filter="all">全部 (20)</button>
+          <button class="case-filter-btn" data-filter="慢病管理">慢病管理 (3)</button>
+          <button class="case-filter-btn" data-filter="远程问诊">远程问诊 (4)</button>
+          <button class="case-filter-btn" data-filter="赴英就医">赴英就医 (3)</button>
+          <button class="case-filter-btn" data-filter="留学生服务">留学生服务 (7)</button>
+          <button class="case-filter-btn" data-filter="干货分享">干货分享 (3)</button>
+<!-- BUILD:END:recovery-filters -->
         </div>
       </div>
     </section>
@@ -75,7 +82,148 @@
     <section class="section">
       <div class="container">
         <div class="case-grid" id="articlesGrid-recovery">
-          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+<!-- BUILD:BEGIN:recovery-grid -->
+        <a href="consultation/chronic-care-03.html" class="case-card animate-on-scroll delay-1" data-category="慢病管理" data-id="chronic-care-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/chronic-care-03.jpg" alt="原来，血糖降不下来是因为用药方案过时了" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">慢病管理</div>
+          <h4>原来，血糖降不下来是因为用药方案过时了</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>2026年英国NICE指南更新，颠覆传统二甲双胍单药起始阶梯疗法，推荐新诊断患者起始联合使用SGLT-2抑制剂与二甲双胍，心血管高危或40岁前确诊者加用GLP-1激动剂，以早期保护心肾。</p>
+        </a>
+        <a href="consultation/remote-consult-4.html" class="case-card animate-on-scroll delay-2" data-category="远程问诊" data-id="remote-consult-4">
+          <div class="case-image"><img loading="lazy" src="images/articles/remote-consult-4.jpg" alt="英国TOP医生远程问诊案例：胸痛+肌钙蛋白升高居然是因为气胸" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">远程问诊</div>
+          <h4>英国TOP医生远程问诊案例：胸痛+肌钙蛋白升高居然是因为气胸</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>客户胸痛肌钙蛋白升高，疑似心梗但检查不典型。英国专家远程会诊，确诊气胸致心肌一过性损伤，非冠脉问题。对症治疗后痊愈。找对医生，比多做检查更重要。</p>
+        </a>
+        <a href="consultation/student-5.html" class="case-card animate-on-scroll delay-3" data-category="留学生服务" data-id="student-5">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-5.jpg" alt="英国留学|眼睛红肿、狂眼泪居然是因为花粉过敏？" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>英国留学|眼睛红肿、狂眼泪居然是因为花粉过敏？</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>16岁女儿在伦敦夏令营期间眼部严重红肿。我们建议先看全科而非专科，经排查确诊为季节性花粉过敏。对症治疗后症状显著缓解，女孩恢复学习。</p>
+        </a>
+        <a href="consultation/student-6.html" class="case-card animate-on-scroll delay-1" data-category="留学生服务" data-id="student-6">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-6.jpg" alt="英国留学｜16岁孩子突发罕见脑炎；NHS服务拉垮，私立没人接" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>英国留学｜16岁孩子突发罕见脑炎；NHS服务拉垮，私立没人接</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>一位伦敦A-Level女生突发NMDA脑炎，NHS虽保命但康复迟缓。Arkect团队紧急介入，72小时内锁定顶级专家Dr Zandi，一周内完成转诊私立病房。</p>
+        </a>
+        <a href="consultation/student-7.html" class="case-card animate-on-scroll delay-2" data-category="留学生服务" data-id="student-7">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-7.jpg" alt="留学英国，感冒发烧别硬扛：一份本地买药地图请收好" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>留学英国，感冒发烧别硬扛：一份本地买药地图请收好</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>英国非处方药购买很方便，无需自带大量药品。常见病有对应药，认准有效成分。处方药自备，急症求医。我们提供医疗支持。</p>
+        </a>
+        <a href="consultation/student-04.html" class="case-card animate-on-scroll delay-3" data-category="留学生服务" data-id="student-04">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-04.jpg" alt="英国留学｜有效病假条怎么开？不是所有Sick Note都有效" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>英国留学｜有效病假条怎么开？不是所有Sick Note都有效</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>初到英国的留学生面对NHS体系常因预约效率低下而陷入困境。本文详解从GP就诊延误到病假证明缺失的实际痛点，并梳理圣链健康（Arkect Health）作为高效替代方案的适用场景与操作流程。</p>
+        </a>
+        <a href="consultation/student-01.html" class="case-card animate-on-scroll delay-1" data-category="留学生服务" data-id="student-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-01.jpg" alt="英国留学生就医指南：NHS注册、GP预约与紧急情况处理" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>英国留学生就医指南：NHS注册、GP预约与紧急情况处理</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>初到英国的留学生面对NHS体系往往不知所措。本文详解从NHS注册到各层级就医的完整流程。</p>
+        </a>
+        <a href="consultation/tips-01.html" class="case-card animate-on-scroll delay-2" data-category="干货分享" data-id="tips-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/tips-01.jpg" alt="医学影像怎么看？给患者的CT/MRI报告解读指南" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">干货分享</div>
+          <h4>医学影像怎么看？给患者的CT/MRI报告解读指南</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>面对满是专业术语的影像报告，患者往往一头雾水。本文用通俗语言帮您理解报告中的关键信息。</p>
+        </a>
+        <a href="consultation/remote-consult-01.html" class="case-card animate-on-scroll delay-3" data-category="远程问诊" data-id="remote-consult-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/remote-consult-01.jpg" alt="远程问诊如何改变跨境就医格局？" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">远程问诊</div>
+          <h4>远程问诊如何改变跨境就医格局？</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>从视频问诊到多学科远程会诊，数字医疗正在打破国界限制，让中国患者足不出户即可获得英国顶尖专家的诊疗意见。</p>
+        </a>
+        <a href="consultation/chronic-care-01.html" class="case-card animate-on-scroll delay-1" data-category="慢病管理" data-id="chronic-care-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/chronic-care-01.jpg" alt="宁养计划：为慢病患者重塑生活品质" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">慢病管理</div>
+          <h4>宁养计划：为慢病患者重塑生活品质</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>慢性病不是终点，而是需要精细化管理的长期旅程。圣链健康宁养计划整合全球顶尖医疗资源，为慢病患者提供全周期健康守护。</p>
+        </a>
+        <a href="consultation/uk-treatment-01.html" class="case-card animate-on-scroll delay-2" data-category="赴英就医" data-id="uk-treatment-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-treatment-01.jpg" alt="赴英就医全流程指南：从签证到入院的无缝衔接" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">赴英就医</div>
+          <h4>赴英就医全流程指南：从签证到入院的无缝衔接</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>圣链健康为您详解赴英就医的每一个关键环节，从医疗签证申请到英国医院入院，全程专业陪同。</p>
+        </a>
+        <a href="consultation/tips-02.html" class="case-card animate-on-scroll delay-3" data-category="干货分享" data-id="tips-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/tips-02.jpg" alt="英国医疗体系全景解读：NHS、私立医疗与GP制度" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">干货分享</div>
+          <h4>英国医疗体系全景解读：NHS、私立医疗与GP制度</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>理解英国医疗体系的基本架构，是做出明智就医决策的基础。一文讲清NHS与私立医疗的关系和选择。</p>
+        </a>
+        <a href="consultation/remote-consult-02.html" class="case-card animate-on-scroll delay-1" data-category="远程问诊" data-id="remote-consult-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/remote-consult-02.jpg" alt="视频问诊前如何准备，才能让专家高效诊断？" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">远程问诊</div>
+          <h4>视频问诊前如何准备，才能让专家高效诊断？</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>充分的资料准备是远程问诊成功的关键。本文为您梳理问诊前需要准备的完整资料清单和注意事项。</p>
+        </a>
+        <a href="consultation/student-02.html" class="case-card animate-on-scroll delay-2" data-category="留学生服务" data-id="student-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-02.jpg" alt="留学生心理健康：在异国他乡识别和应对心理困扰" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>留学生心理健康：在异国他乡识别和应对心理困扰</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>文化冲击、学业压力、社交孤立……留学生心理健康问题不容忽视。圣链健康提供专业的心理支持资源。</p>
+        </a>
+        <a href="consultation/uk-treatment-02.html" class="case-card animate-on-scroll delay-3" data-category="赴英就医" data-id="uk-treatment-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-treatment-02.jpg" alt="英国顶级医院巡礼：如何选择最适合您的医疗机构" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">赴英就医</div>
+          <h4>英国顶级医院巡礼：如何选择最适合您的医疗机构</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>从The Royal Marsden到Great Ormond Street，英国拥有全球顶尖的专科医院。不同疾病该如何选择？</p>
+        </a>
+        <a href="consultation/chronic-care-02.html" class="case-card animate-on-scroll delay-1" data-category="慢病管理" data-id="chronic-care-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/chronic-care-02.jpg" alt="英国NHS慢病管理模式对中国的启示" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">慢病管理</div>
+          <h4>英国NHS慢病管理模式对中国的启示</h4>
+          <div class="case-meta"><span>2025年6月</span></div>
+          <p>英国NHS在慢病管理领域积累了70余年经验，其系统性管理理念值得借鉴。圣链健康将NHS最佳实践本土化落地。</p>
+        </a>
+        <a href="consultation/tips-03.html" class="case-card animate-on-scroll delay-2" data-category="干货分享" data-id="tips-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/tips-03.jpg" alt="基因检测报告怎么看？BRCA、EGFR与靶向治疗的关键解读" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">干货分享</div>
+          <h4>基因检测报告怎么看？BRCA、EGFR与靶向治疗的关键解读</h4>
+          <div class="case-meta"><span>2025年6月</span></div>
+          <p>基因检测正成为精准医疗的基石。本文帮助您理解检测报告中与治疗决策最相关的核心信息。</p>
+        </a>
+        <a href="consultation/remote-consult-03.html" class="case-card animate-on-scroll delay-3" data-category="远程问诊" data-id="remote-consult-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/remote-consult-03.jpg" alt="远程第二诊疗意见：避免误诊的关键一步" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">远程问诊</div>
+          <h4>远程第二诊疗意见：避免误诊的关键一步</h4>
+          <div class="case-meta"><span>2025年6月</span></div>
+          <p>研究表明约20%的初次诊断需要修正。远程第二诊疗意见为重大疾病患者提供了不冒风险即可获得国际专家确认的途径。</p>
+        </a>
+        <a href="consultation/student-03.html" class="case-card animate-on-scroll delay-1" data-category="留学生服务" data-id="student-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/student-03.jpg" alt="行前健康准备清单：出发前必做的10件事" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">留学生服务</div>
+          <h4>行前健康准备清单：出发前必做的10件事</h4>
+          <div class="case-meta"><span>2025年5月</span></div>
+          <p>留学英国前做好健康准备，比生病后再应对重要100倍。圣链健康为您整理完整的行前健康准备清单。</p>
+        </a>
+        <a href="consultation/uk-treatment-03.html" class="case-card animate-on-scroll delay-2" data-category="赴英就医" data-id="uk-treatment-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-treatment-03.jpg" alt="医疗签证申请避坑指南：8个常见拒签原因及对策" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">赴英就医</div>
+          <h4>医疗签证申请避坑指南：8个常见拒签原因及对策</h4>
+          <div class="case-meta"><span>2025年5月</span></div>
+          <p>医疗签证被拒是赴英就医最大的不确定性。圣链健康签证团队总结5年经验，帮您避开8大常见拒签陷阱。</p>
+        </a>
+<!-- BUILD:END:recovery-grid -->
         </div>
       </div>
     </section>
@@ -124,7 +272,9 @@
     <section class="section" style="padding-bottom:0;">
       <div class="container">
         <div class="case-filters animate-on-scroll" id="articleFilters-frontier">
-          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+<!-- BUILD:BEGIN:frontier-filters -->
+
+<!-- BUILD:END:frontier-filters -->
         </div>
       </div>
     </section>
@@ -133,7 +283,57 @@
     <section class="section">
       <div class="container">
         <div class="case-grid" id="articlesGrid-frontier">
-          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+<!-- BUILD:BEGIN:frontier-grid -->
+        <a href="consultation/frontier-07.html" class="case-card animate-on-scroll delay-1" data-category="医界前沿" data-id="frontier-07">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-07.jpg" alt="全球首例！AI进了手术室：英国完成AI辅助脑外科手术，普通人如何借&quot;超级大脑&quot;看病？" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>全球首例！AI进了手术室：英国完成AI辅助脑外科手术，普通人如何借&quot;超级大脑&quot;看病？</h4>
+          <div class="case-meta"><span>2026年9月</span></div>
+          <p>英国UCLH完成全球首例AI实时辅助脑外科手术，AI在内镜画面中同步标记关键血管和神经，帮助医生安全切除垂体瘤。这对普通患者意味着什么？</p>
+        </a>
+        <a href="consultation/frontier-01.html" class="case-card animate-on-scroll delay-2" data-category="医界前沿" data-id="frontier-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-01.jpg" alt="英国CAR-T细胞疗法新突破：血液肿瘤缓解率提升至90%" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>英国CAR-T细胞疗法新突破：血液肿瘤缓解率提升至90%</h4>
+          <div class="case-meta"><span>2025年12月</span></div>
+          <p>英国Royal Marsden医院联合UCL癌症研究所发布最新临床试验结果，新一代CAR-T细胞疗法在复发/难治性淋巴瘤患者中实现了90%的整体缓解率，较传统方案提升近30%。</p>
+        </a>
+        <a href="consultation/frontier-02.html" class="case-card animate-on-scroll delay-3" data-category="医界前沿" data-id="frontier-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-02.jpg" alt="CRISPR基因编辑首次用于遗传性心脏病治疗" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>CRISPR基因编辑首次用于遗传性心脏病治疗</h4>
+          <div class="case-meta"><span>2025年11月</span></div>
+          <p>伦敦King's College Hospital成功完成全球首例体内CRISPR基因编辑治疗肥厚型心肌病的临床试验，患者术后心功能显著改善。</p>
+        </a>
+        <a href="consultation/frontier-03.html" class="case-card animate-on-scroll delay-1" data-category="医界前沿" data-id="frontier-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-03.jpg" alt="牛津大学AI诊断系统可将早期胰腺癌检出率提高40%" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>牛津大学AI诊断系统可将早期胰腺癌检出率提高40%</h4>
+          <div class="case-meta"><span>2025年10月</span></div>
+          <p>牛津大学医学院开发的新型AI辅助诊断系统，通过分析常规CT影像，可在胰腺癌早期阶段识别微小病灶，检出率较传统方法提高40%。</p>
+        </a>
+        <a href="consultation/frontier-04.html" class="case-card animate-on-scroll delay-2" data-category="医界前沿" data-id="frontier-04">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-04.jpg" alt="帝国理工研发帕金森病早期生物标志物检测面板" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>帝国理工研发帕金森病早期生物标志物检测面板</h4>
+          <div class="case-meta"><span>2025年9月</span></div>
+          <p>帝国理工学院团队开发出一种基于血液的帕金森病早期检测面板，可在症状出现前5-8年识别高风险人群，准确率达85%。</p>
+        </a>
+        <a href="consultation/frontier-05.html" class="case-card animate-on-scroll delay-3" data-category="医界前沿" data-id="frontier-05">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-05.jpg" alt="英国机器人辅助手术年度报告：术后恢复时间缩短50%" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>英国机器人辅助手术年度报告：术后恢复时间缩短50%</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>英国皇家外科学院发布年度报告，机器人辅助手术在英国各大医院的应用率持续增长，患者术后平均恢复时间较传统开放手术缩短50%。</p>
+        </a>
+        <a href="consultation/frontier-06.html" class="case-card animate-on-scroll delay-1" data-category="医界前沿" data-id="frontier-06">
+          <div class="case-image"><img loading="lazy" src="images/articles/frontier-06.jpg" alt="剑桥大学个性化癌症疫苗进入III期临床试验" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">医界前沿</div>
+          <h4>剑桥大学个性化癌症疫苗进入III期临床试验</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>剑桥大学Addenbrooke's医院启动个性化mRNA癌症疫苗的III期临床试验，针对黑色素瘤患者，根据个体肿瘤突变谱定制疫苗方案。</p>
+        </a>
+<!-- BUILD:END:frontier-grid -->
         </div>
       </div>
     </section>
@@ -145,7 +345,9 @@
     <section class="section" style="padding-bottom:0;">
       <div class="container">
         <div class="case-filters animate-on-scroll" id="articleFilters-uk-news">
-          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+<!-- BUILD:BEGIN:uk-news-filters -->
+
+<!-- BUILD:END:uk-news-filters -->
         </div>
       </div>
     </section>
@@ -154,7 +356,50 @@
     <section class="section">
       <div class="container">
         <div class="case-grid" id="articlesGrid-uk-news">
-          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+<!-- BUILD:BEGIN:uk-news-grid -->
+        <a href="consultation/uk-news-01.html" class="case-card animate-on-scroll delay-1" data-category="英伦医讯" data-id="uk-news-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-01.jpg" alt="NHS发布2025年十年计划：投资21亿英镑升级数字医疗基础设施" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>NHS发布2025年十年计划：投资21亿英镑升级数字医疗基础设施</h4>
+          <div class="case-meta"><span>2025年12月</span></div>
+          <p>英国国民医疗服务体系（NHS）正式发布2025年十年战略计划，核心内容包括投资21亿英镑升级数字医疗基础设施、缩短专科转诊等待时间至4周以内、扩大AI辅助诊断覆盖范围。</p>
+        </a>
+        <a href="consultation/uk-news-02.html" class="case-card animate-on-scroll delay-2" data-category="英伦医讯" data-id="uk-news-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-02.jpg" alt="HCA Healthcare UK扩建伦敦旗舰医院，新增200张床位" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>HCA Healthcare UK扩建伦敦旗舰医院，新增200张床位</h4>
+          <div class="case-meta"><span>2025年11月</span></div>
+          <p>HCA Healthcare UK宣布将在伦敦市中心扩建其旗舰医院，新增200张床位及最先进的手术中心，预计2026年投入使用，进一步提升私立医疗接待能力。</p>
+        </a>
+        <a href="consultation/uk-news-03.html" class="case-card animate-on-scroll delay-3" data-category="英伦医讯" data-id="uk-news-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-03.jpg" alt="英国更新医疗访客签证政策：简化赴英就医申请流程" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>英国更新医疗访客签证政策：简化赴英就医申请流程</h4>
+          <div class="case-meta"><span>2025年10月</span></div>
+          <p>英国内政部宣布简化医疗访客签证（Medical Visitor Visa）申请流程，新增在线预审通道，审批时间缩短至5个工作日，方便国际患者赴英就医。</p>
+        </a>
+        <a href="consultation/uk-news-04.html" class="case-card animate-on-scroll delay-1" data-category="英伦医讯" data-id="uk-news-04">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-04.jpg" alt="MHRA加速审批创新药物，2025年批准创新药数量创历史新高" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>MHRA加速审批创新药物，2025年批准创新药数量创历史新高</h4>
+          <div class="case-meta"><span>2025年9月</span></div>
+          <p>英国药品和医疗保健产品监管局（MHRA）报告显示，2025年共批准68款创新药物上市，创历史新高，其中肿瘤和罕见病药物占比超过60%。</p>
+        </a>
+        <a href="consultation/uk-news-05.html" class="case-card animate-on-scroll delay-2" data-category="英伦医讯" data-id="uk-news-05">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-05.jpg" alt="英国GMC新规：海外医生注册流程将进一步简化" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>英国GMC新规：海外医生注册流程将进一步简化</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>英国医学总会（GMC）宣布将简化国际医学毕业生注册流程，新增多国学历互认机制，预计将显著缩短海外医生在英国执业的准入时间。</p>
+        </a>
+        <a href="consultation/uk-news-06.html" class="case-card animate-on-scroll delay-3" data-category="英伦医讯" data-id="uk-news-06">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-news-06.jpg" alt="中英医学交流峰会：推动精准医疗领域深度合作" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医讯</div>
+          <h4>中英医学交流峰会：推动精准医疗领域深度合作</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>第12届中英医学交流峰会在伦敦举行，两国签署多项合作协议，涵盖精准医疗、远程医疗和临床试验等领域，为中英医疗合作注入新动力。</p>
+        </a>
+<!-- BUILD:END:uk-news-grid -->
         </div>
       </div>
     </section>
@@ -166,7 +411,9 @@
     <section class="section" style="padding-bottom:0;">
       <div class="container">
         <div class="case-filters animate-on-scroll" id="articleFilters-uk-knowledge">
-          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+<!-- BUILD:BEGIN:uk-knowledge-filters -->
+
+<!-- BUILD:END:uk-knowledge-filters -->
         </div>
       </div>
     </section>
@@ -175,7 +422,50 @@
     <section class="section">
       <div class="container">
         <div class="case-grid" id="articlesGrid-uk-knowledge">
-          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+<!-- BUILD:BEGIN:uk-knowledge-grid -->
+        <a href="consultation/uk-knowledge-01.html" class="case-card animate-on-scroll delay-1" data-category="英伦医知" data-id="uk-knowledge-01">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-01.jpg" alt="一文读懂英国医疗体系：NHS与私立医疗全解析" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>一文读懂英国医疗体系：NHS与私立医疗全解析</h4>
+          <div class="case-meta"><span>2025年12月</span></div>
+          <p>英国医疗体系由国民医疗服务（NHS）和私立医疗两大板块构成。NHS提供全民免费医疗，但面临等待时间长、资源紧张等挑战；私立医疗以HCA、Bupa为代表，提供快速就诊、专属医生和高端设施。</p>
+        </a>
+        <a href="consultation/uk-knowledge-02.html" class="case-card animate-on-scroll delay-2" data-category="英伦医知" data-id="uk-knowledge-02">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-02.jpg" alt="英国全科医生（GP）制度详解：如何预约、转诊与获取处方" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>英国全科医生（GP）制度详解：如何预约、转诊与获取处方</h4>
+          <div class="case-meta"><span>2025年11月</span></div>
+          <p>英国实行严格的GP首诊制，所有非急诊就医需先经GP评估。本文详解GP预约方式、转诊流程、处方获取及留学生注册指南。</p>
+        </a>
+        <a href="consultation/uk-knowledge-03.html" class="case-card animate-on-scroll delay-3" data-category="英伦医知" data-id="uk-knowledge-03">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-03.jpg" alt="英国癌症治疗路径：MDT多学科会诊模式详解" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>英国癌症治疗路径：MDT多学科会诊模式详解</h4>
+          <div class="case-meta"><span>2025年10月</span></div>
+          <p>英国肿瘤治疗以MDT（多学科团队）会诊为核心，由外科、肿瘤内科、放疗科、病理科等多领域专家共同制定治疗方案，确保每位患者获得最优治疗策略。</p>
+        </a>
+        <a href="consultation/uk-knowledge-04.html" class="case-card animate-on-scroll delay-1" data-category="英伦医知" data-id="uk-knowledge-04">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-04.jpg" alt="英国罕见病诊疗体系：从基因诊断到精准治疗" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>英国罕见病诊疗体系：从基因诊断到精准治疗</h4>
+          <div class="case-meta"><span>2025年9月</span></div>
+          <p>英国是全球罕见病诊疗的领先者，拥有欧洲最大的罕见病转诊网络。本文介绍英国罕见病的诊断流程、基因检测技术和多中心协作治疗模式。</p>
+        </a>
+        <a href="consultation/uk-knowledge-05.html" class="case-card animate-on-scroll delay-2" data-category="英伦医知" data-id="uk-knowledge-05">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-05.jpg" alt="赴英就医全攻略：签证、费用、翻译与注意事项" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>赴英就医全攻略：签证、费用、翻译与注意事项</h4>
+          <div class="case-meta"><span>2025年8月</span></div>
+          <p>从医疗访客签证申请、治疗费用预估、医学翻译安排到在英生活指南，一文汇总赴英就医所需了解的全部信息与实用建议。</p>
+        </a>
+        <a href="consultation/uk-knowledge-06.html" class="case-card animate-on-scroll delay-3" data-category="英伦医知" data-id="uk-knowledge-06">
+          <div class="case-image"><img loading="lazy" src="images/articles/uk-knowledge-06.jpg" alt="中英药物差异知多少：常见药物的名称、剂量与使用差异" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>
+          <div class="case-tag">英伦医知</div>
+          <h4>中英药物差异知多少：常见药物的名称、剂量与使用差异</h4>
+          <div class="case-meta"><span>2025年7月</span></div>
+          <p>中英两国在药物审批、命名体系和剂量标准上存在显著差异。本文梳理常见药物的对应关系、剂量差异及注意事项，帮助跨境就医患者安全用药。</p>
+        </a>
+<!-- BUILD:END:uk-knowledge-grid -->
         </div>
       </div>
     </section>

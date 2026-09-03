@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.arkecthealth.com/</loc>
-  </url>
-  <url>
-    <loc>https://www.arkecthealth.com/about.html</loc>
-  </url>
-  <url>
-    <loc>https://www.arkecthealth.com/services.html</loc>
-  </url>
+  <url><loc>https://www.arkecthealth.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://www.arkecthealth.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.arkecthealth.com/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-chronic.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-private.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-checkup.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-student.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-uk-treatment.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/service-remote.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/resources.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.arkecthealth.com/doctors.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/cases-studies/index.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.arkecthealth.com/cases.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.arkecthealth.com/process.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.arkecthealth.com/blog.html</loc><priority>0.6</priority></url>
 </urlset>

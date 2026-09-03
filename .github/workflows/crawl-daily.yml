@@ -1,0 +1,39 @@
+name: Daily Article Crawl
+
+on:
+  schedule:
+    # Every day at 9:00 UTC (17:00 Beijing / 9:00 UK winter)
+    - cron: '0 9 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Needed for git push
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --quiet requests feedparser openai python-dotenv
+
+      - name: Run crawler
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4o-mini
+        run: |
+          python3 crawl-articles.py --count 2 --auto-commit
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Crawl Results" >> $GITHUB_STEP_SUMMARY
+          echo "Check the logs above for new articles." >> $GITHUB_STEP_SUMMARY

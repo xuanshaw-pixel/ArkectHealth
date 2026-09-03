@@ -14,6 +14,7 @@ import re
 ARTICLES_DIR = os.path.join(os.path.dirname(__file__), 'articles')
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), 'js', 'articles-data.js')
 CONSULTATION_DIR = os.path.join(os.path.dirname(__file__), 'consultation')
+CASES_HTML_FILE = os.path.join(os.path.dirname(__file__), 'cases.html')
 SITE_URL = 'https://www.arkecthealth.com'
 
 def parse_frontmatter(text):
@@ -336,6 +337,124 @@ def escape_js_string(s):
     s = re.sub(r'\s{2,}', ' ', s)
     return s
 
+def html_escape(s):
+    """HTML 属性值转义"""
+    s = s.replace('&', '&amp;')
+    s = s.replace('"', '&quot;')
+    s = s.replace('<', '&lt;')
+    s = s.replace('>', '&gt;')
+    return s
+
+def format_date_zh(date_str):
+    """将 2025-11-20 格式化为 2025年11月"""
+    parts = date_str.split('-')
+    if len(parts) >= 2:
+        return parts[0] + '年' + str(int(parts[1])) + '月'
+    return date_str
+
+def generate_card_html(article, idx):
+    """生成单张文章卡片的静态 HTML"""
+    delay = (idx % 3) + 1
+    cat = html_escape(article['category'])
+    title = html_escape(article['title'])
+    summary = html_escape(article['summary'])
+    date_zh = format_date_zh(article.get('date', ''))
+    aid = html_escape(article['id'])
+    img = article.get('image', '')
+
+    # 图片区域
+    if img and img != 'None':
+        img_html = f'''          <div class="case-image"><img loading="lazy" src="{html_escape(img)}" alt="{title}" onerror="this.style.display='none';this.parentElement.classList.add('no-image');"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>'''
+    else:
+        img_html = '''          <div class="case-image no-image"><div class="case-image-fallback"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h2v5zm0 4h-2v-2h2v2z"/></svg></div></div>'''
+
+    card = f'''        <a href="consultation/{aid}.html" class="case-card animate-on-scroll delay-{delay}" data-category="{cat}" data-id="{aid}">
+{img_html}
+          <div class="case-tag">{cat}</div>
+          <h4>{title}</h4>
+          <div class="case-meta"><span>{date_zh}</span></div>
+          <p>{summary}</p>
+        </a>'''
+    return card
+
+def generate_filters_html(tab_key, categories, articles):
+    """生成筛选按钮的静态 HTML"""
+    # 筛出属于该 tab 的文章
+    tab_articles = [a for a in articles if a['category'] in categories]
+    total = len(tab_articles)
+
+    if not tab_articles or len(categories) <= 1:
+        # 单分类或无文章，不需要筛选按钮
+        return ''
+
+    # 统计每个分类数量
+    counts = {}
+    for a in tab_articles:
+        counts[a['category']] = counts.get(a['category'], 0) + 1
+
+    buttons = [f'          <button class="case-filter-btn active" data-filter="all">全部 ({total})</button>']
+    for cat in categories:
+        cnt = counts.get(cat, 0)
+        if cnt > 0:
+            buttons.append(f'          <button class="case-filter-btn" data-filter="{html_escape(cat)}">{html_escape(cat)} ({cnt})</button>')
+
+    return '\n'.join(buttons)
+
+def _replace_between_markers(html, marker, new_content):
+    """替换 <!-- BUILD:BEGIN:marker --> ... <!-- BUILD:END:marker --> 之间的内容
+    
+    如果找不到 BEGIN/END 标记，也尝试兼容旧的单行占位符 <!-- marker -->
+    """
+    begin = f'<!-- BUILD:BEGIN:{marker} -->'
+    end = f'<!-- BUILD:END:{marker} -->'
+    if begin in html and end in html:
+        # 新格式：替换两个标记之间的全部内容
+        pattern = re.compile(re.escape(begin) + r'.*?' + re.escape(end), re.DOTALL)
+        replacement = begin + '\n' + new_content + '\n' + end
+        return pattern.sub(replacement, html)
+    else:
+        # 兼容旧格式：单行占位符
+        old_marker = f'<!-- {marker} -->'
+        if old_marker in html:
+            return html.replace(old_marker, new_content)
+        else:
+            print(f'  ⚠️  cases.html 中未找到标记 {marker}，跳过注入')
+            return html
+
+def inject_cases_html(articles):
+    """将静态文章卡片注入 cases.html"""
+    # Tab 配置：tab_key → (grid_marker, filter_marker, categories)
+    tab_map = {
+        'recovery':      ('recovery-grid',      'recovery-filters',      ['慢病管理','远程问诊','赴英就医','留学生服务','干货分享']),
+        'frontier':      ('frontier-grid',      'frontier-filters',      ['医界前沿']),
+        'uk-news':       ('uk-news-grid',       'uk-news-filters',       ['英伦医讯']),
+        'uk-knowledge':  ('uk-knowledge-grid',  'uk-knowledge-filters',  ['英伦医知']),
+    }
+
+    with open(CASES_HTML_FILE, 'r', encoding='utf-8') as f:
+        html = f.read()
+
+    for tab_key, (grid_marker, filter_marker, categories) in tab_map.items():
+        # 筛出该 tab 的文章，按日期倒序
+        tab_articles = [a for a in articles if a['category'] in categories]
+        tab_articles.sort(key=lambda a: a.get('date', ''), reverse=True)
+
+        # 生成卡片 HTML
+        cards = [generate_card_html(a, idx) for idx, a in enumerate(tab_articles)]
+        grid_html = '\n'.join(cards) if cards else '          <p style="text-align:center;color:var(--text-light);padding:60px 0;">暂无文章，敬请期待</p>'
+
+        # 生成筛选按钮 HTML
+        filter_html = generate_filters_html(tab_key, categories, articles)
+
+        # 使用双标记替换（支持重复构建）
+        html = _replace_between_markers(html, grid_marker, grid_html)
+        html = _replace_between_markers(html, filter_marker, filter_html)
+
+    with open(CASES_HTML_FILE, 'w', encoding='utf-8') as f:
+        f.write(html)
+
+    print(f'✅ 静态文章卡片已注入 {CASES_HTML_FILE}')
+
 def main():
     md_files = sorted(glob.glob(os.path.join(ARTICLES_DIR, '*.md')))
     # 跳过 _ 开头的文件（模板等）
@@ -393,13 +512,13 @@ def main():
         comma = ',' if i < len(articles) - 1 else ''
         content_js = escape_js_string(a['content_html'])
         lines.append(f'  {{')
-        lines.append(f'    id: \'{a["id"]}\',')
-        lines.append(f'    category: \'{a["category"]}\',')
-        lines.append(f'    title: \'{a["title"]}\',')
-        lines.append(f'    summary: \'{a["summary"]}\',')
-        lines.append(f'    date: \'{a["date"]}\',')
-        lines.append(f'    author: \'{a["author"]}\',')
-        lines.append(f'    image: \'{a["image"]}\',')
+        lines.append(f'    id: \'{escape_js_string(a["id"])}\',')
+        lines.append(f'    category: \'{escape_js_string(a["category"])}\',')
+        lines.append(f'    title: \'{escape_js_string(a["title"])}\',')
+        lines.append(f'    summary: \'{escape_js_string(a["summary"])}\',')
+        lines.append(f'    date: \'{escape_js_string(a["date"])}\',')
+        lines.append(f'    author: \'{escape_js_string(a["author"])}\',')
+        lines.append(f'    image: \'{escape_js_string(a["image"])}\',')
         lines.append(f'    content: \'{content_js}\'')
         lines.append(f'  }}{comma}')
 
@@ -413,6 +532,9 @@ def main():
 
     # 生成 consultation/[id].html 详情页
     generate_article_pages(articles)
+
+    # 将静态文章卡片注入 cases.html（SEO 友好）
+    inject_cases_html(articles)
 
 if __name__ == '__main__':
     main()

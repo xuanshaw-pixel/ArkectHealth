@@ -3,631 +3,537 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="圣链健康 — 亚洲首家英式顶级医疗资源整合平台，1位英国皇室私医 + 300余位医学泰斗，为您解锁英伦医疗秘钥。">
+  <title>圣链健康 Arkect Health - 亚洲首家英式医疗资源整合平台</title>
   <meta name="baidu-site-verification" content="codeva-G16shNjITc" />
-  <meta name="keywords" content="圣链健康,英式医疗,皇室私医,专家会诊,国际医疗,第二诊疗意见,英国医疗">
-  <title>圣链健康 — 亚洲首家英式顶级医疗资源整合平台</title>
-
-  <!-- Google Fonts: Noto Serif SC + Noto Sans SC -->
+  <meta name="description" content="圣链健康成立于2019年，亚洲首家全球医疗精准匹配平台，专注对接英国顶级医生资源。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="images/hero-london-bridge.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=20260903">
 </head>
 <body>
 
-  <!-- ============================================
-       导航栏
-       ============================================ -->
-  <nav class="navbar" id="navbar">
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <span>ARKECT HEALTH</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar transparent" data-transparent>
     <div class="container">
-      <a href="index.html" class="nav-logo">
-        <div class="nav-logo-icon">圣</div>
-        <span class="nav-logo-text">圣链健康</span>
-      </a>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#brand">关于我们</a>
-        <a href="services.html">核心服务</a>
-        <a href="#modes">就医方式</a>
-        <a href="#process">服务流程</a>
-        <a href="#trust">安全保障</a>
-        <a href="resources/experts.html">专家团队</a>
-        <a href="case-studies/index.html">真实案例</a>
-        <div class="nav-cta">
-          <a href="forms/consultation.html" class="btn btn-primary">免费咨询</a>
+<a href="index.html" class="nav-logo">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">
+          <span class="brand-en">ARKECT HEALTH</span>
+          <span class="brand-cn">圣链健康</span>
         </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">首页</a>
+        <a href="about.html">关于我们</a>
+        <div class="nav-dropdown">
+          <a href="services.html">我们的服务</a>
+          <div class="dropdown-menu">
+            <a href="service-chronic.html">高端慢病管理</a>
+            <a href="service-private.html">皇家私人医生</a>
+            <a href="service-checkup.html">个性化体检</a>
+            <a href="service-student.html">留学生健康管家</a>
+            <a href="service-uk-treatment.html">赴英看病</a>
+            <a href="service-remote.html">远程问诊</a>
+          </div>
+        </div>
+        <a href="resources.html">医疗资源</a>
+        <a href="cases.html">资讯分享</a>
+        <a href="process.html">问诊流程</a>
+        <a href="contact.html" class="btn btn-primary btn-sm nav-cta">预约咨询</a>
+        <span class="nav-lang">EN</span>
       </div>
-
-      <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-toggle">
+        <span></span><span></span><span></span>
       </div>
     </div>
   </nav>
 
-  <!-- ============================================
-       首屏 Hero
-       ============================================ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay-pattern"></div>
-
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img loading="eager" src="images/hero-london-bridge.jpg" alt="London Bridge">
+    </div>
+    <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <div class="hero-badge-dot"></div>
-          <span>EST. 2019 · LONDON & BEIJING</span>
-        </div>
-
-        <h1>解锁<span class="gold-text">英伦医疗</span>秘钥</h1>
-
-        <p class="hero-desc">
-          亚洲首家英式顶级医疗资源整合平台，汇聚英国皇室私医与三百余位医学泰斗，为您搭建通往世界顶尖医疗的尊享桥梁。
-        </p>
-
+        <h1>亚洲首家英式医疗<span>资源整合平台</span></h1>
+        <p class="subtitle">圣链健康 · 连接中英顶级医疗资源<br>一位专属私人医生 + 3,200+全球专家后援团<br>严选英国前10%顶级医生，覆盖45个专科</p>
         <div class="hero-buttons">
-          <a href="forms/consultation.html" class="btn btn-primary">免费咨询</a>
-          <a href="forms/appointment.html" class="btn btn-outline">预约会诊</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">预约免费咨询</a>
+          <a href="about.html" class="btn btn-outline btn-lg">了解更多</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number"><span class="counter" data-target="3200" data-suffix="+">0</span></div>
+            <div class="desc">全球专家后援团</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number"><span class="counter" data-target="45">0</span></div>
+            <div class="desc">覆盖专科</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">前<span class="counter" data-target="10" data-suffix="%">0</span></div>
+            <div class="desc">英国顶级医生</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="hero-bottom-bar">
-      <div class="container">
-        <div class="hero-stat">
-          <div class="hero-stat-number">2019</div>
-          <div class="hero-stat-label">成立于伦敦</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">1</div>
-          <div class="hero-stat-label">皇室私医领衔</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">300+</div>
-          <div class="hero-stat-label">医学泰斗</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-number">100%</div>
-          <div class="hero-stat-label">GDPR合规</div>
-        </div>
+    <div class="hero-decoration">
+      <div class="circle-outer"></div>
+      <div class="circle-inner"></div>
+      <div class="circle-center">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
       </div>
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
     </div>
   </section>
 
-  <!-- ============================================
-       品牌故事
-       ============================================ -->
-  <section class="section brand-story" id="brand">
+  <!-- About Section -->
+  <section class="section" id="about">
     <div class="container">
-      <div class="brand-story-grid">
-        <div class="brand-story-image fade-in-left">
-          <div class="brand-story-image-inner">
-            <!-- 图片占位：泰晤士河/伦敦街景 -->
-            <div class="brand-story-image-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21 15 16 10 5 21"/>
-              </svg>
-              <span>伦敦 · 泰晤士河畔</span>
-              <small style="font-size:0.75rem;opacity:0.5;margin-top:8px;">images/hero/london-river.jpg</small>
+      <div class="about-grid">
+        <div class="about-image animate-from-left">
+          <img loading="lazy" src="images/about-hero.jpg" alt="圣链健康 - 伦敦·北京双总部" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        </div>
+        <div class="about-text animate-from-right">
+          <span class="text-gold" style="font-size:0.85rem;font-weight:600;letter-spacing:2px;">ABOUT ARKECT HEALTH</span>
+          <h3>亚洲首家全球医疗<br>精准匹配平台</h3>
+          <p>圣链健康成立于2019年，以伦敦、北京双总部模式运营。我们与英国牛津大学、剑桥大学医学院、帝国理工医学院、HCA医疗集团等世界顶级机构展开深度合作，为高品质医疗资源搭建共享桥梁。</p>
+          <p>秉承"找对人，更健康"的理念，我们将英国皇室私人医生模式与中国家庭健康需求深度融合，独创"一位专属私人医生 + 3,200+全球专家后援团"的双重保障体系。</p>
+          <div class="about-highlights">
+            <div class="about-highlight-item">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+              <span>伦敦·北京双总部</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+              <span>3,200+ 全球专家</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+              <span>英国前10%顶级医生</span>
+            </div>
+            <div class="about-highlight-item">
+              <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/></svg></div>
+              <span>华人执业医生翻译</span>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="brand-story-text fade-in-right">
-          <div class="section-subtitle">Our Story</div>
-          <h2 class="section-title">源自英伦，<br>为尊贵而生</h2>
-          <div class="gold-line-left"></div>
-
-          <p>
-            2019年，圣链健康诞生于伦敦与北京双城之间。我们深知，真正的顶级医疗不仅仅是技术的领先，更是一种对生命的至高敬意与守护。
-          </p>
-          <p>
-            我们打破地域与体系的壁垒，将英国皇室级别的医疗资源——从女王御用私医到各学科奠基人——系统性地引入亚洲，为每一位追求极致健康的尊贵客户，构建专属的英式医疗通道。
-          </p>
-          <p>
-            在圣链健康，每一次问诊都是一次跨越国界的医学对话，每一份方案都凝聚着英伦百年的医学智慧与匠心。
-          </p>
-
-          <div class="brand-story-signature">
-            <div class="brand-story-signature-line">Since 2019 · London & Beijing</div>
+  <!-- Partners Section -->
+  <section class="section bg-off-white" id="partners">
+    <div class="container">
+      <div class="section-title animate-on-scroll">
+        <span class="label">WORLD-CLASS PARTNERS</span>
+        <h2>世界顶级<span>合作机构</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>与英国最顶尖的医学机构和医疗集团深度合作，为您提供最权威的医疗资源保障</p>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-card animate-on-scroll delay-1">
+          <div class="partner-image">
+            <img loading="lazy" src="images/partner-oxford.jpg" alt="牛津大学">
+            <div class="partner-image-overlay"></div>
           </div>
+          <div class="partner-logo"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg></div>
+          <div class="partner-name">牛津大学医学院</div>
+          <div class="partner-desc">University of Oxford Medical School</div>
+          <div class="partner-detail">全球排名前三的医学学府，在临床医学、免疫学、肿瘤学等领域处于世界领先地位，培养了众多诺贝尔医学奖得主。</div>
+        </div>
+        <div class="partner-card animate-on-scroll delay-2">
+          <div class="partner-image">
+            <img loading="lazy" src="images/partner-cambridge.jpg" alt="剑桥大学">
+            <div class="partner-image-overlay"></div>
+          </div>
+          <div class="partner-logo"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg></div>
+          <div class="partner-name">剑桥大学医学院</div>
+          <div class="partner-desc">University of Cambridge Medical School</div>
+          <div class="partner-detail">八百年历史名校，在遗传学、神经科学、再生医学等前沿领域享有盛誉，Addenbrooke's医院是其核心教学医院。</div>
+        </div>
+        <div class="partner-card animate-on-scroll delay-3">
+          <div class="partner-image">
+            <img loading="lazy" src="images/partner-imperial.jpg" alt="帝国理工学院">
+            <div class="partner-image-overlay"></div>
+          </div>
+          <div class="partner-logo"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg></div>
+          <div class="partner-name">帝国理工医学院</div>
+          <div class="partner-desc">Imperial College School of Medicine</div>
+          <div class="partner-detail">欧洲顶尖理工类大学医学院，在生物医学工程、传染病学、公共卫生领域成果卓著，旗下拥有多所NHS名院。</div>
+        </div>
+        <div class="partner-card animate-on-scroll delay-4">
+          <div class="partner-image">
+            <img loading="lazy" src="images/partner-hca.jpg" alt="HCA医疗集团">
+            <div class="partner-image-overlay"></div>
+          </div>
+          <div class="partner-logo"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V17z"/></svg></div>
+          <div class="partner-name">HCA医疗集团</div>
+          <div class="partner-desc">HCA Healthcare UK</div>
+          <div class="partner-detail">英国最大的私立医疗集团，旗下拥有The Portland、The Wellington等知名私立医院，涵盖从产科到肿瘤的全方位医疗服务。</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       核心模式：数字卡片
-       ============================================ -->
-  <section class="section core-model" id="model">
+  <!-- Services Section -->
+  <section class="section" id="services">
     <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Core Model</div>
-        <h2 class="section-title">核心模式</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">一位皇室私医领衔，三百余位医学泰斗护航，为您构建全方位、多学科的顶级医疗保障体系</p>
+      <div class="section-title animate-on-scroll">
+        <span class="label">OUR SERVICES</span>
+        <h2>六大核心<span>服务</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>从个性化健康管理到全球顶级医疗资源对接，为每一个家庭提供全周期、主动式、定制化的健康守护</p>
       </div>
-
-      <div class="model-cards">
-        <div class="model-card fade-in">
-          <div class="model-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-            </svg>
-          </div>
-          <div class="model-card-number">1</div>
-          <div class="model-card-title">英国皇室私医</div>
-          <div class="model-card-desc">曾任英国皇室御用医师，拥有超过30年临床经验，亲自领衔您的健康管理之旅</div>
+      <div class="services-grid">
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M19.5 9.5c-1.03 0-1.9.62-2.29 1.5h-2.92c-.39-.88-1.26-1.5-2.29-1.5s-1.9.62-2.29 1.5H6.79c-.39-.88-1.26-1.5-2.29-1.5C3.12 9.5 2 10.62 2 12s1.12 2.5 2.5 2.5c1.03 0 1.9-.62 2.29-1.5h2.92c.39.88 1.26 1.5 2.29 1.5s1.9-.62 2.29-1.5h2.92c.39.88 1.26 1.5 2.29 1.5 1.38 0 2.5-1.12 2.5-2.5s-1.12-2.5-2.5-2.5z"/></svg></div>
+          <h3>高端慢病管理</h3>
+          <p>针对慢性疾病提供全程管理方案，英国顶级专科医生制定个性化治疗计划，持续跟踪健康指标。</p>
+          <a href="service-chronic.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
         </div>
-
-        <div class="model-card fade-in">
-          <div class="model-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <div class="model-card-number" data-count="300">300</div>
-          <div class="model-card-unit">+</div>
-          <div class="model-card-title">医学泰斗</div>
-          <div class="model-card-desc">覆盖肿瘤、心血管、神经科学等40余个专科，均来自英国TOP10医疗机构</div>
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+          <h3>英国皇家私人医生</h3>
+          <p>将英国皇室私人医生模式引入中国家庭，一位专属私人医生+3,200+全球专家双重保障。</p>
+          <a href="service-private.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
         </div>
-
-        <div class="model-card fade-in">
-          <div class="model-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
-          </div>
-          <div class="model-card-number">24</div>
-          <div class="model-card-unit">/7</div>
-          <div class="model-card-title">全天候响应</div>
-          <div class="model-card-desc">专属医疗管家全天候在线，任何健康疑问，随时响应，永不缺席</div>
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M19 8h-1V3H6v5H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zM8 5h8v3H8V5zm8 12v2H8v-4h8v2zm2-2v-2H6v2H4v-4c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v4h-2z"/></svg></div>
+          <h3>个性化体检定制</h3>
+          <p>根据个人健康状况与家族病史，量身定制英国顶级体检方案，全面筛查健康风险。</p>
+          <a href="service-checkup.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
         </div>
-
-        <div class="model-card fade-in">
-          <div class="model-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </div>
-          <div class="model-card-number">40</div>
-          <div class="model-card-unit">+</div>
-          <div class="model-card-title">覆盖专科</div>
-          <div class="model-card-desc">从罕见病到重大疾病，多学科联合会诊，确保每一份诊断精准权威</div>
+        <div class="service-card animate-on-scroll delay-1">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
+          <h3>留学生健康管家</h3>
+          <p>为海外留学生提供全方位健康守护，从日常健康咨询到紧急就医协助，让家长安心。</p>
+          <a href="service-student.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-2">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg></div>
+          <h3>赴英看病</h3>
+          <p>一站式赴英就医服务，从医生匹配、行程安排到翻译陪同，全程无忧对接英国顶级医疗。</p>
+          <a href="service-uk-treatment.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
+        </div>
+        <div class="service-card animate-on-scroll delay-3">
+          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg></div>
+          <h3>远程问诊</h3>
+          <p>足不出户连线英国顶级医生，华人执业医生全程翻译，让每一次沟通精准、安心。</p>
+          <a href="service-remote.html" class="card-link">了解详情 <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       核心壁垒
-       ============================================ -->
-  <section class="section core-advantages" id="services">
+  <!-- Dual Guarantee Section -->
+  <section class="section bg-navy" id="guarantee">
     <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Core Advantages</div>
-        <h2 class="section-title">三大核心壁垒</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">我们以远超行业标准的严苛体系，铸就不可复制的竞争优势</p>
+      <div class="section-title light animate-on-scroll">
+        <span class="label">DUAL GUARANTEE SYSTEM</span>
+        <h2>双重保障<span>体系</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p style="color:rgba(255,255,255,0.6);">独创"一位专属私人医生 + 3,200+全球专家后援团"的双重保障体系</p>
       </div>
-
-      <div class="advantage-cards">
-        <div class="advantage-card fade-in">
-          <div class="advantage-card-number">01</div>
-          <div class="advantage-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
+      <div class="dual-guarantee">
+        <div class="guarantee-card animate-from-left" style="background:var(--navy-light);border-color:rgba(201,168,76,0.2);">
+          <div class="guarantee-image">
+            <img loading="lazy" src="images/guarantee-private-1.jpg?v=2" alt="专属私人医生">
           </div>
-          <h3>严苛筛选</h3>
-          <p>仅入选英国TOP10医疗机构的学科带头人，通过率不足3%。每一位专家均经皇室私医亲自审核，确保学术权威与临床经验的双重卓越。</p>
+          <div class="guarantee-icon"><svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg></div>
+          <h3 style="color:var(--white);">专属私人医生</h3>
+          <p style="color:rgba(255,255,255,0.6);">英国皇室级私人医生服务，一对一专属健康管理，从日常守护到疑难重症，全程陪伴您的健康之路。</p>
+          <div class="highlight-number">1 : 1</div>
         </div>
-
-        <div class="advantage-card fade-in">
-          <div class="advantage-card-number">02</div>
-          <div class="advantage-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="3"/>
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
+        <div class="guarantee-card animate-from-right" style="background:var(--navy-light);border-color:rgba(201,168,76,0.2);">
+          <div class="guarantee-image">
+            <img loading="lazy" src="images/guarantee-expert-1.jpg?v=2" alt="全球专家后援团">
           </div>
-          <h3>三维匹配</h3>
-          <p>独创"病理-心理-生活方式"三维评估体系，不仅匹配最对症的学科专家，更精准匹配最契合您个人需求的医疗方案，让治疗更有人情温度。</p>
-        </div>
-
-        <div class="advantage-card fade-in">
-          <div class="advantage-card-number">03</div>
-          <div class="advantage-card-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <h3>无界绿通</h3>
-          <p>依托皇室级医疗通道，48小时内完成专家会诊安排，72小时内启动赴英就医全流程。从签证到入院，每一个环节无缝衔接，畅通无阻。</p>
+          <div class="guarantee-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <h3 style="color:var(--white);">全球专家后援团</h3>
+          <p style="color:rgba(255,255,255,0.6);">覆盖45个专科的3,200+全球顶级专家资源，随时为您的健康问题提供多学科会诊和权威意见。</p>
+          <div class="highlight-number">3,200+</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       服务方式：线上 vs 线下
-       ============================================ -->
-  <section class="section service-modes" id="modes">
+  <!-- Doctor Selection Process -->
+  <section class="section" id="selection">
     <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Service Modes</div>
-        <h2 class="section-title">选择您的就医方式</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">无论身在何处，顶尖医疗触手可及</p>
+      <div class="section-title animate-on-scroll">
+        <span class="label">RIGOROUS SELECTION</span>
+        <h2>医生严选<span>五步流程</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>每一位入选医生均经过五重严格筛选，确保只为您推荐英国前10%的顶级医疗专家</p>
       </div>
-
-      <div class="modes-comparison">
-        <!-- 线上就医 -->
-        <div class="mode-card fade-in-left">
-          <div class="mode-card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
-            </svg>
-          </div>
-          <h3>线上就医</h3>
-          <p>足不出户，连线英伦顶级专家，获得权威诊疗意见</p>
-          <ul class="mode-features">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              高清视频一对一问诊
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              中英双语医学翻译全程陪同
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              72小时内获取书面诊疗报告
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              病历资料英方专家预处理
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              诊后30天随访跟踪
-            </li>
-          </ul>
-          <a href="ways/online.html" class="btn btn-outline-dark">了解线上就医</a>
+      <div class="process-horizontal animate-on-scroll">
+        <div class="step-item">
+          <div class="step-num">01</div>
+          <h4>同行认可</h4>
+          <p>始于业内同行认可，确保候选医生在专业领域内具有卓越声誉</p>
         </div>
-
-        <!-- 分隔线 -->
-        <div class="modes-divider">
-          <div class="modes-divider-line"></div>
-          <div class="modes-divider-text">VS</div>
-          <div class="modes-divider-line"></div>
+        <div class="step-item">
+          <div class="step-num">02</div>
+          <h4>医生提名</h4>
+          <p>由执业医生进行专业提名，从医学专业角度评估候选医生资质</p>
         </div>
-
-        <!-- 线下赴英 -->
-        <div class="mode-card mode-card-featured fade-in-right">
-          <div class="mode-card-badge">推荐</div>
-          <div class="mode-card-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </div>
-          <h3>线下赴英</h3>
-          <p>亲临英国顶级医疗机构，享受皇室级全流程就医体验</p>
-          <ul class="mode-features">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              英国TOP10医院优先预约
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              皇室私医亲诊与全程陪护
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              VIP签证加急及出行安排
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              伦敦五星级医疗康养住宿
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              归国后90天持续健康管理
-            </li>
-          </ul>
-          <a href="ways/offline.html" class="btn btn-gold-outline">了解线下赴英</a>
+        <div class="step-item">
+          <div class="step-num">03</div>
+          <h4>背景核查</h4>
+          <p>第三方咨询公司进行深度背景核查，全方位验证医生执业记录</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">04</div>
+          <h4>委员会审核</h4>
+          <p>各领域国际知名医生组成"临床领袖委员会"最终审核</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">05</div>
+          <h4>正式入选</h4>
+          <p>通过全部审核流程，正式成为圣链健康严选顶级医生</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       服务流程
-       ============================================ -->
-  <section class="section service-process" id="process">
+  <!-- Featured Hospitals -->
+  <section class="section bg-off-white" id="hospitals">
     <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Service Process</div>
-        <h2 class="section-title">三步开启英伦医疗之旅</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">从咨询到康复，每一步都有专业团队为您护航</p>
+      <div class="section-title animate-on-scroll">
+        <span class="label">TOP UK HOSPITALS</span>
+        <h2>顶级合作<span>医院</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>精选英国最负盛名的医院，为您提供世界一流的医疗服务</p>
       </div>
-
-      <div class="process-steps">
-        <!-- 就诊前 -->
-        <div class="process-step fade-in">
-          <div class="process-step-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-            <div class="process-step-number">1</div>
+      <div class="hospital-grid">
+        <div class="hospital-card animate-on-scroll delay-1">
+          <div class="hospital-image">
+            <img loading="lazy" src="images/hospital-charing-cross.jpg" alt="Charing Cross Hospital">
+            <span class="hospital-badge">NHS 顶级</span>
           </div>
-          <h3>就诊前</h3>
-          <p>专业评估，精准匹配</p>
-          <ul class="process-step-items">
-            <li>健康档案建立</li>
-            <li>病历资料翻译与整理</li>
-            <li>三维需求评估</li>
-            <li>专家精准匹配</li>
-            <li>会诊方案定制</li>
-          </ul>
-        </div>
-
-        <!-- 就诊中 -->
-        <div class="process-step fade-in">
-          <div class="process-step-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-            <div class="process-step-number">2</div>
+          <div class="hospital-info">
+            <h4>Charing Cross Hospital</h4>
+            <div class="specialty">神经科学 · 内分泌 · 泌尿外科</div>
+            <p>帝国理工医疗集团旗下旗舰医院，在多个专科领域处于英国领先地位。</p>
           </div>
-          <h3>就诊中</h3>
-          <p>尊享体验，全程无忧</p>
-          <ul class="process-step-items">
-            <li>双语医学翻译全程陪同</li>
-            <li>皇室私医亲诊/多学科会诊</li>
-            <li>实时诊疗方案沟通</li>
-            <li>专属管家生活安排</li>
-            <li>VIP绿色通道保障</li>
-          </ul>
         </div>
-
-        <!-- 就诊后 -->
-        <div class="process-step fade-in">
-          <div class="process-step-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
-            <div class="process-step-number">3</div>
+        <div class="hospital-card animate-on-scroll delay-2">
+          <div class="hospital-image">
+            <img loading="lazy" src="images/hospital-royal-marsden.jpg" alt="Royal Marsden Hospital">
+            <span class="hospital-badge">癌症权威</span>
           </div>
-          <h3>就诊后</h3>
-          <p>持续关怀，健康长伴</p>
-          <ul class="process-step-items">
-            <li>权威诊疗报告交付</li>
-            <li>治疗方案本地化衔接</li>
-            <li>定期随访与健康管理</li>
-            <li>24/7专属医疗管家</li>
-            <li>终身健康档案维护</li>
-          </ul>
+          <div class="hospital-info">
+            <h4>Royal Marsden Hospital</h4>
+            <div class="specialty">肿瘤学 · 放射治疗 · 临床研究</div>
+            <p>世界著名的癌症专科医院，英国癌症治疗与研究领域的标杆机构。</p>
+          </div>
         </div>
+        <div class="hospital-card animate-on-scroll delay-3">
+          <div class="hospital-image">
+            <img loading="lazy" src="images/hospital-st-thomas.jpg" alt="St Thomas' Hospital">
+            <span class="hospital-badge">心血管权威</span>
+          </div>
+          <div class="hospital-info">
+            <h4>St Thomas' Hospital</h4>
+            <div class="specialty">心血管 · 肾脏医学 · 老年医学</div>
+            <p>伦敦最古老的医院之一，拥有英国顶尖的心血管中心和肾脏医学部门。</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:40px;">
+        <a href="resources.html" class="btn btn-outline-navy">查看更多合作医院</a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       信任模块：数据安全
-       ============================================ -->
-  <section class="section trust-module" id="trust">
+  <!-- Cases Preview -->
+  <section class="section" id="cases">
     <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Trust & Security</div>
-        <h2 class="section-title">您的信任，我们以标准守护</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">在圣链健康，数据安全与隐私保护不仅是承诺，更是不可逾越的底线</p>
+      <div class="section-title animate-on-scroll">
+        <span class="label">SUCCESS STORIES</span>
+        <h2>案例<span>分享</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>每一个成功案例背后，都是我们对医疗品质的执着追求</p>
       </div>
-
-      <div class="trust-items">
-        <div class="trust-item fade-in">
-          <div class="trust-item-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
+      <div class="cases-grid">
+        <div class="case-card animate-on-scroll delay-1">
+          <div class="case-header">
+            <span class="case-tag">肿瘤科</span>
+            <h4>晚期肺癌多学科会诊</h4>
+            <span class="case-patient">患者：张女士 · 52岁</span>
           </div>
-          <h4>GDPR 全面合规</h4>
-          <p>严格遵循欧盟《通用数据保护条例》，您的健康数据享有与英国国民同等水平的法律保护</p>
-        </div>
-
-        <div class="trust-item fade-in">
-          <div class="trust-item-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <polyline points="9 12 11 14 15 10"/>
-            </svg>
-          </div>
-          <h4>256位加密传输</h4>
-          <p>采用银行级AES-256加密标准，所有病历资料与视频问诊数据均经端到端加密，杜绝任何信息泄露风险</p>
-        </div>
-
-        <div class="trust-item fade-in">
-          <div class="trust-item-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h4>NHS数据标准</h4>
-          <p>数据管理流程与英国国家医疗服务体系（NHS）同源同标，确保您的健康信息在英国医疗体系中的无缝对接</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       转化表单区
-       ============================================ -->
-  <section class="section cta-section" id="contact">
-    <div class="container">
-      <div class="cta-grid">
-        <div class="cta-text fade-in-left">
-          <div class="section-subtitle">Get Started</div>
-          <h2>开启您的<br>英伦医疗之旅</h2>
-          <div class="gold-line-left"></div>
-          <p>留下您的信息，专属医疗管家将在24小时内与您取得联系，为您量身定制医疗方案。</p>
-
-          <ul class="cta-features">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              首次咨询完全免费，无任何隐性费用
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              24小时内专人回复，绝不拖延
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              所有信息严格保密，GDPR标准保护
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-              可选择中文或英文沟通
-            </li>
-          </ul>
-        </div>
-
-        <div class="cta-form fade-in-right">
-          <h3>预约<span class="gold-text">免费咨询</span></h3>
-          <form id="consultationForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">姓名 *</label>
-                <input type="text" id="name" name="name" placeholder="请输入您的姓名" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">联系电话 *</label>
-                <input type="tel" id="phone" name="phone" placeholder="请输入您的手机号" required>
-              </div>
+          <div class="case-body">
+            <p>国内诊断晚期肺癌，通过圣链健康对接Royal Marsden医院顶级肿瘤团队，获得全新治疗方案。</p>
+            <div class="case-result">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              治疗方案有效，病情得到控制
             </div>
-
-            <div class="form-group">
-              <label for="email">电子邮箱</label>
-              <input type="email" id="email" name="email" placeholder="请输入您的邮箱地址">
-            </div>
-
-            <div class="form-group">
-              <label for="service">咨询服务</label>
-              <select id="service" name="service">
-                <option value="">请选择您感兴趣的服务</option>
-                <option value="royal-physician">皇室私医服务</option>
-                <option value="expert-consultation">专家会诊</option>
-                <option value="second-opinion">第二诊疗意见</option>
-                <option value="prevention-plan">预防健康管理</option>
-                <option value="international-consultation">国际会诊</option>
-                <option value="uk-treatment">赴英就医</option>
-                <option value="online-consultation">线上问诊</option>
-                <option value="other">其他服务</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">病情简述</label>
-              <textarea id="message" name="message" placeholder="请简要描述您的健康状况或咨询需求，我们将严格保密"></textarea>
-            </div>
-
-            <div class="form-submit">
-              <button type="submit" class="btn btn-primary">提交咨询申请</button>
-            </div>
-            <p class="form-note">提交即表示您同意我们的隐私政策，您的信息将被严格保密</p>
-          </form>
+          </div>
         </div>
+        <div class="case-card animate-on-scroll delay-2">
+          <div class="case-header">
+            <span class="case-tag">心血管</span>
+            <h4>复杂心脏手术转诊</h4>
+            <span class="case-patient">患者：王先生 · 65岁</span>
+          </div>
+          <div class="case-body">
+            <p>复杂冠心病需要高难度手术，经St Thomas'医院心血管中心专家远程评估后赴英手术。</p>
+            <div class="case-result">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              手术成功，术后恢复良好
+            </div>
+          </div>
+        </div>
+        <div class="case-card animate-on-scroll delay-3">
+          <div class="case-header">
+            <span class="case-tag">神经科</span>
+            <h4>帕金森病精准诊疗</h4>
+            <span class="case-patient">患者：李先生 · 58岁</span>
+          </div>
+          <div class="case-body">
+            <p>帕金森病长期用药效果不佳，通过远程问诊获得Charing Cross医院神经科专家精准调药方案。</p>
+            <div class="case-result">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              症状明显改善，生活质量提升
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:40px;">
+        <a href="cases.html" class="btn btn-outline-navy">查看更多案例</a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       底部 Footer
-       ============================================ -->
-  <footer class="footer" id="footer">
+  <!-- Bottom CTA Banner -->
+  <section class="bottom-banner">
     <div class="container">
-      <div class="footer-main">
+      <div class="banner-text">
+        <h3>开启您的专属健康守护之旅</h3>
+        <p>7×24小时健康热线 · 伦敦·北京双总部为您服务</p>
+      </div>
+      <div class="banner-locations">
+        <div class="banner-loc">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          🇬🇧 伦敦总部
+        </div>
+        <div class="banner-loc">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          🇨🇳 北京总部
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-lg" style="background:var(--navy);color:var(--gold);border-color:var(--navy);">预约免费咨询</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <div class="nav-logo-icon">圣</div>
-            <span class="nav-logo-text">圣链健康</span>
-          </a>
-          <p>亚洲首家英式顶级医疗资源整合平台，2019年成立于伦敦与北京。以皇室级医疗资源，守护您的健康与尊严。</p>
+          <div class="footer-logo">
+            <div class="logo-icon">A</div>
+            <span class="brand-text">ARKECT HEALTH</span>
+          </div>
+          <p>圣链健康成立于2019年，亚洲首家全球医疗精准匹配平台。与英国顶级医疗机构深度合作，为每一个家庭提供全周期、主动式、定制化的健康守护。</p>
         </div>
-
-        <div class="footer-column">
-          <h4>核心服务</h4>
-          <a href="services/royal-physician.html">皇室私医</a>
-          <a href="services/expert-consultation.html">专家会诊</a>
-          <a href="services/prevention-plan.html">预防计划</a>
-          <a href="services/international-consultation.html">国际会诊</a>
-          <a href="services/second-opinion.html">第二诊疗意见</a>
+        <div class="footer-col">
+          <h5>关于我们</h5>
+          <a href="about.html">公司简介</a>
+          <a href="resources.html">医疗资源</a>
+          <a href="doctors.html">精选医生</a>
+          <a href="cases.html">资讯分享</a>
         </div>
-
-        <div class="footer-column">
-          <h4>了解更多</h4>
-          <a href="pages/about.html">关于我们</a>
-          <a href="pages/service-model.html">服务模式</a>
-          <a href="pages/process.html">服务流程</a>
-          <a href="resources/experts.html">专家团队</a>
-          <a href="resources/institutions.html">合作机构</a>
+        <div class="footer-col">
+          <h5>我们的服务</h5>
+          <a href="service-chronic.html">高端慢病管理</a>
+          <a href="service-private.html">皇家私人医生</a>
+          <a href="service-checkup.html">个性化体检</a>
+          <a href="service-student.html">留学生健康管家</a>
+          <a href="service-uk-treatment.html">赴英看病</a>
+          <a href="service-remote.html">远程问诊</a>
         </div>
+        <div class="footer-col">
+          <h5>快速链接</h5>
+          <a href="process.html">问诊流程</a>
+          <a href="blog.html">健康资讯</a>
+          <a href="contact.html">联系我们</a>
+        </div>
+        <div class="footer-qr-group"><div class="footer-qr"><img loading="lazy" src="images/qrcode-official.png" alt="微信公众号"><span>微信公众号</span></div><div class="footer-qr"><img loading="lazy" src="images/qrcode-video.png" alt="视频号"><span>视频号</span></div></div>
+      </div>
 
-        <div class="footer-column">
-          <h4>联系方式</h4>
-          <a href="forms/consultation.html">免费咨询</a>
-          <a href="forms/appointment.html">预约会诊</a>
-          <a href="forms/callback.html">申请回电</a>
-          <a href="mailto:contact@holychain-health.com">contact@holychain-health.com</a>
-          <a href="tel:+4420XXXXXXXX">+44 20 XXXX XXXX</a>
+      <div class="footer-locations">
+        <div class="footer-location">
+          <div class="loc-flag">🇬🇧</div>
+          <div class="loc-info">
+            <h6>伦敦总部</h6>
+            <p>London, United Kingdom<br>enquiries@arkect.co.uk</p>
+          </div>
+        </div>
+        <div class="footer-location">
+          <div class="loc-flag">🇨🇳</div>
+          <div class="loc-info">
+            <h6>北京总部</h6>
+            <p>Beijing, China<br>enquiries@arkect.co.uk</p>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2024 圣链健康 HolyChain Health. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="pages/privacy.html">隐私政策</a>
-          <a href="pages/terms.html">服务条款</a>
-          <a href="pages/cookie.html">Cookie政策</a>
+        <span>© 2019-2026 Arkect Health 圣链健康. All Rights Reserved.</span>
+        <div class="footer-links">
+          <a href="#">隐私政策</a>
+          <a href="#">数据保护</a>
+          <a href="#">使用条款</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <div class="scroll-top" id="scrollTop">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"/>
-    </svg>
+  <!-- Floating Widgets -->
+  <div class="floating-consult">
+    <div class="floating-btn wechat">
+      <svg viewBox="0 0 24 24"><path d="M8.5 11c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm5 0c.83 0 1.5-.67 1.5-1.5S14.33 8 13.5 8 12 8.67 12 9.5s.67 1.5 1.5 1.5zM12 2C6.48 2 2 5.94 2 10.73c0 3.07 1.76 5.77 4.49 7.37L5 21.5l4.47-2.27c.81.19 1.66.29 2.53.29 5.52 0 10-3.94 10-8.79S17.52 2 12 2z"/></svg>
+      <div class="wechat-popup">
+        <div class="popup-title">扫码联系圣链健康</div>
+        <div class="qr-grid">
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-official.png" alt="官方公众号" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4z"/></svg><span>公众号二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方公众号</strong>扫码关注</div>
+          </div>
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-service.png" alt="官方客服" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg><span>客服二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方客服</strong>扫码添加</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="contact.html" class="floating-btn consult">
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+    </a>
+    <div class="floating-btn top">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </div>
   </div>
 
-  <!-- Main JavaScript -->
-  <script src="js/main.js"></script>
-
+  <script src="js/main.js?v=20260903"></script>
 </body>
-</html>
+</html><!-- 测试更新 -->。

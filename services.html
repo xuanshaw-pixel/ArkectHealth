@@ -3,779 +3,318 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="圣链健康皇室家庭私人医生服务 — 英国皇家健康标准，全年无限次问诊，专属医疗管家，中英双语服务。">
-  <meta name="keywords" content="皇室私医,私人医生,英式医疗,家庭医生,圣链健康">
-  <title>皇室家庭私人医生 — 圣链健康</title>
-
-  <!-- Google Fonts -->
+  <title>我们的服务 - 圣链健康 Arkect Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css">
-
-  <!-- Page-specific Styles -->
-  <style>
-    /* ---------- Page Hero ---------- */
-    .page-hero {
-      position: relative;
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      background: var(--color-primary);
-      overflow: hidden;
-      padding-top: 80px;
-    }
-    .page-hero-bg {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(135deg, rgba(10,22,40,0.93) 0%, rgba(10,22,40,0.72) 50%, rgba(10,22,40,0.88) 100%),
-        url('../images/hero/medical-environment.jpg') center/cover no-repeat;
-      z-index: 1;
-    }
-    .page-hero-content {
-      position: relative; z-index: 3; max-width: 720px; padding: var(--spacing-3xl) 0;
-    }
-    .page-hero h1 { font-size: 3rem; color: var(--color-white); margin-bottom: var(--spacing-md); line-height: 1.3; }
-    .page-hero h1 .gold-text { color: var(--color-gold); }
-    .page-hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.7); margin-bottom: var(--spacing-xl); line-height: 2; }
-
-    /* Breadcrumb */
-    .breadcrumb { padding: var(--spacing-sm) 0; font-size: 0.82rem; }
-    .breadcrumb a { color: rgba(255,255,255,0.5); }
-    .breadcrumb a:hover { color: var(--color-gold); }
-    .breadcrumb span { color: rgba(255,255,255,0.3); margin: 0 8px; }
-    .breadcrumb .current { color: var(--color-gold); }
-
-    /* ---------- Quote Block ---------- */
-    .quote-block {
-      background: var(--color-white); border-left: 3px solid var(--color-gold);
-      padding: var(--spacing-xl) var(--spacing-lg);
-      border-radius: 0 var(--border-radius-lg) var(--border-radius-lg) 0;
-      box-shadow: var(--shadow-sm); margin: var(--spacing-2xl) 0;
-    }
-    .quote-block p {
-      font-family: var(--font-serif); font-size: 1.05rem; line-height: 2;
-      color: var(--color-text); font-style: italic;
-    }
-    .quote-signature {
-      margin-top: var(--spacing-md); padding-top: var(--spacing-md);
-      border-top: 1px solid var(--color-gray-light);
-      font-family: var(--font-serif); font-size: 1rem; color: var(--color-gold);
-      letter-spacing: 2px; font-style: normal; font-weight: 600;
-    }
-
-    /* ---------- Value Cards (4-col) ---------- */
-    .value-cards { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--spacing-lg); }
-    .value-card {
-      text-align: center; padding: var(--spacing-xl) var(--spacing-md);
-      background: var(--color-white); border-radius: var(--border-radius-lg);
-      border: 1px solid var(--color-gray-light); transition: var(--transition);
-    }
-    .value-card:hover { border-color: var(--color-gold); box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .value-card-icon {
-      width: 60px; height: 60px; margin: 0 auto var(--spacing-md);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: rgba(201,169,110,0.08); color: var(--color-gold); font-size: 1.5rem;
-    }
-    .value-card h3 { font-size: 1.1rem; margin-bottom: var(--spacing-sm); }
-    .value-card p { font-size: 0.88rem; line-height: 1.7; }
-
-    /* ---------- Highlights Grid (3x3) ---------- */
-    .highlights-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lg); }
-    .highlight-card {
-      padding: var(--spacing-lg); background: var(--color-white);
-      border-radius: var(--border-radius-lg); border: 1px solid var(--color-gray-light);
-      transition: var(--transition); display: flex; gap: var(--spacing-md); align-items: flex-start;
-    }
-    .highlight-card:hover { border-color: rgba(201,169,110,0.4); box-shadow: var(--shadow-sm); }
-    .highlight-card-icon {
-      width: 48px; height: 48px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: var(--border-radius-lg); background: rgba(201,169,110,0.08);
-      color: var(--color-gold); font-size: 1.2rem;
-    }
-    .highlight-card-content h4 { font-size: 1rem; margin-bottom: 6px; color: var(--color-primary); }
-    .highlight-card-content p { font-size: 0.85rem; line-height: 1.7; }
-
-    /* ---------- Escort Grid ---------- */
-    .escort-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--spacing-lg); }
-    .escort-card {
-      padding: var(--spacing-xl) var(--spacing-lg); border-radius: var(--border-radius-lg);
-      border: 1px solid rgba(201,169,110,0.2); background: rgba(255,255,255,0.03);
-      text-align: center; transition: var(--transition);
-    }
-    .escort-card:hover { border-color: rgba(201,169,110,0.4); background: rgba(201,169,110,0.05); transform: translateY(-4px); }
-    .escort-card-icon {
-      width: 56px; height: 56px; margin: 0 auto var(--spacing-md);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; border: 1px solid rgba(201,169,110,0.3); color: var(--color-gold); font-size: 1.4rem;
-    }
-    .escort-card h4 { color: var(--color-white); font-size: 1rem; margin-bottom: var(--spacing-xs); }
-    .escort-card p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
-
-    /* ---------- Process Flow ---------- */
-    .process-flow { display: flex; align-items: flex-start; justify-content: center; gap: 0; max-width: 900px; margin: 0 auto; }
-    .process-flow-step { flex: 1; text-align: center; position: relative; padding: 0 var(--spacing-md); }
-    .process-flow-step::after {
-      content: ''; position: absolute; top: 32px; right: -12px;
-      width: 24px; height: 2px; background: var(--color-gold);
-    }
-    .process-flow-step:last-child::after { display: none; }
-    .process-flow-icon {
-      width: 64px; height: 64px; margin: 0 auto var(--spacing-md);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: var(--color-primary); color: var(--color-gold);
-      font-size: 1.5rem; border: 2px solid var(--color-gold); position: relative; z-index: 2;
-    }
-    .process-flow-step h4 { font-size: 1.05rem; margin-bottom: 6px; }
-    .process-flow-step p { font-size: 0.85rem; line-height: 1.6; }
-
-    /* ---------- Audience Grid ---------- */
-    .audience-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--spacing-lg); }
-    .audience-card {
-      text-align: center; padding: var(--spacing-xl) var(--spacing-md);
-      border-radius: var(--border-radius-lg); background: var(--color-white);
-      border: 1px solid var(--color-gray-light); transition: var(--transition);
-    }
-    .audience-card:hover { border-color: rgba(201,169,110,0.4); box-shadow: var(--shadow-sm); transform: translateY(-3px); }
-    .audience-card-icon {
-      width: 56px; height: 56px; margin: 0 auto var(--spacing-md);
-      display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; background: rgba(201,169,110,0.08); color: var(--color-gold); font-size: 1.4rem;
-    }
-    .audience-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
-    .audience-card p { font-size: 0.82rem; line-height: 1.6; }
-
-    /* ---------- FAQ Accordion ---------- */
-    .faq-list { max-width: 800px; margin: 0 auto; }
-    .faq-item {
-      border: 1px solid var(--color-gray-light); border-radius: var(--border-radius-lg);
-      margin-bottom: var(--spacing-sm); overflow: hidden; transition: var(--transition);
-    }
-    .faq-item:hover { border-color: rgba(201,169,110,0.3); }
-    .faq-item.active { border-color: rgba(201,169,110,0.4); }
-    .faq-question {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 24px; cursor: pointer; font-family: var(--font-serif);
-      font-size: 1rem; color: var(--color-primary); font-weight: 500;
-      transition: var(--transition); background: var(--color-white);
-    }
-    .faq-question:hover { color: var(--color-gold-dark); }
-    .faq-item.active .faq-question { color: var(--color-gold-dark); background: rgba(201,169,110,0.03); }
-    .faq-icon {
-      width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
-      border-radius: 50%; border: 1px solid var(--color-gray-light); color: var(--color-gold);
-      font-size: 0.8rem; transition: var(--transition); flex-shrink: 0;
-    }
-    .faq-item.active .faq-icon { background: var(--color-gold); color: var(--color-white); border-color: var(--color-gold); transform: rotate(180deg); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .faq-answer-inner { padding: 0 24px 20px; font-size: 0.92rem; line-height: 1.9; color: var(--color-text-light); }
-
-    /* ---------- CTA Banner ---------- */
-    .cta-banner {
-      background: var(--color-primary); padding: var(--spacing-3xl) 0;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-banner::before {
-      content: ''; position: absolute; top: -50%; left: -20%;
-      width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
-    }
-    .cta-banner .container { position: relative; z-index: 1; }
-    .cta-banner h2 { color: var(--color-white); margin-bottom: var(--spacing-md); }
-    .cta-banner p { color: rgba(255,255,255,0.6); margin-bottom: var(--spacing-lg); max-width: 500px; margin-left: auto; margin-right: auto; }
-    .cta-banner-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-md); }
-    .cta-banner-note { font-size: 0.78rem; color: rgba(255,255,255,0.35); max-width: 600px; margin: 0 auto; }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 1024px) {
-      .value-cards { grid-template-columns: repeat(2,1fr); }
-      .audience-grid { grid-template-columns: repeat(2,1fr); }
-      .page-hero h1 { font-size: 2.4rem; }
-    }
-    @media (max-width: 768px) {
-      .value-cards, .highlights-grid, .escort-grid, .audience-grid { grid-template-columns: 1fr; }
-      .process-flow { flex-direction: column; gap: var(--spacing-md); }
-      .process-flow-step::after { display: none; }
-      .page-hero { min-height: 50vh; }
-      .page-hero h1 { font-size: 2rem; }
-    }
-    @media (max-width: 480px) {
-      .page-hero h1 { font-size: 1.7rem; }
-      .highlight-card { flex-direction: column; text-align: center; align-items: center; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20260903">
 </head>
 <body>
-
-  <!-- ============================================
-       导航栏
-       ============================================ -->
-  <nav class="navbar scrolled" id="navbar">
+  <div class="page-loader"><div class="loader-content"><div class="loader-spinner"></div><span>ARKECT HEALTH</span></div></div>
+  <nav class="navbar" data-transparent>
     <div class="container">
-      <a href="../index.html" class="nav-logo">
-        <div class="nav-logo-icon">圣</div>
-        <span class="nav-logo-text">圣链健康</span>
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">A</div>
+          <span class="brand-en">ARKECT HEALTH</span>
       </a>
-
-      <div class="nav-links" id="navLinks">
-        <a href="../index.html">首页</a>
-        <a href="../pages/about.html">关于我们</a>
-        <a href="private-doctor.html" style="color:#C9A96E">皇室私医</a>
-        <a href="expert-consultation.html">专家会诊</a>
-        <a href="../resources/experts.html">专家团队</a>
-        <a href="../case-studies/index.html">真实案例</a>
-        <div class="nav-cta">
-          <a href="../forms/consultation.html" class="btn btn-primary">免费咨询</a>
-        </div>
+      <div class="nav-links">
+        <a href="index.html">首页</a><a href="about.html">关于我们</a>
+        <div class="nav-dropdown"><a href="services.html" class="active">我们的服务</a><div class="dropdown-menu"><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div></div>
+        <a href="resources.html">医疗资源</a><a href="cases.html">资讯分享</a><a href="process.html">问诊流程</a><a href="contact.html" class="btn btn-primary btn-sm nav-cta">预约咨询</a><span class="nav-lang">EN</span>
       </div>
-
-      <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
     </div>
   </nav>
 
-  <!-- ============================================
-       1. 首屏 Hero
-       ============================================ -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="hero-overlay-pattern"></div>
-
+  <!-- Hero -->
+  <section class="page-hero services-page-hero">
     <div class="container">
-      <div class="page-hero-content">
-        <div class="breadcrumb">
-          <a href="../index.html">首页</a>
-          <span>/</span>
-          <a href="private-doctor.html">核心服务</a>
-          <span>/</span>
-          <span class="current">皇室家庭私人医生</span>
-        </div>
-
-        <h1>至臻<span class="gold-text">私人医疗</span>服务</h1>
-        <p class="page-hero-desc">
-          传承皇家健康管理智慧 · 您的专属英伦家庭医生
-        </p>
-
-        <div class="hero-buttons">
-          <a href="../forms/appointment.html" class="btn btn-primary">立即预约</a>
-          <a href="#services-highlight" class="btn btn-outline">了解服务</a>
-        </div>
-      </div>
+      <div class="breadcrumb"><a href="index.html">首页</a><span class="separator">/</span><span class="current">我们的服务</span></div>
+      <span class="label">OUR SERVICES</span>
+      <h1>六大<span>核心服务</span></h1>
+      <p>从日常健康守护到疑难重症会诊，为每一个家庭提供全周期、主动式、定制化的健康守护</p>
     </div>
   </section>
 
-  <!-- ============================================
-       2. 品牌引言
-       ============================================ -->
-  <section class="section" id="quote">
+  <!-- Six Service Lines - Card Grid -->
+  <section class="section" style="padding:80px 0;">
     <div class="container">
-      <div class="quote-block fade-in">
-        <p>
-          "感谢您选择圣链健康的至臻私人医疗服务。这不仅是一项服务，更是一种全新的生活方式——以英国皇家健康标准为基础，结合全球顶尖医疗资源。您的专属医疗顾问和国际权威医生团队将随时为您服务。"
-        </p>
-        <div class="quote-signature">We Care. We Help. We Connect.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       3. 核心价值主张（4个卡片）
-       ============================================ -->
-  <section class="section bg-off-white" id="values">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Core Values</div>
-        <h2 class="section-title">核心价值主张</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">以皇家标准重新定义私人医疗服务</p>
-      </div>
-
-      <div class="value-cards">
-        <div class="value-card fade-in">
-          <div class="value-card-icon">
-            <i class="fa-solid fa-shield-heart"></i>
+      <div class="service-cards-grid">
+        <!-- Service 1 -->
+        <div class="svc-card animate-on-scroll">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-chronic-detail.jpg" alt="高端慢病管理">
           </div>
-          <h3>预防胜于治疗</h3>
-          <p>定期健康评估和监控，发现潜在问题，及早干预，防患于未然</p>
-        </div>
-
-        <div class="value-card fade-in">
-          <div class="value-card-icon">
-            <i class="fa-solid fa-fingerprint"></i>
-          </div>
-          <h3>个性化健康管理</h3>
-          <p>根据年龄、健康状况及特殊需求，定制专属健康管理方案</p>
-        </div>
-
-        <div class="value-card fade-in">
-          <div class="value-card-icon">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
-          <h3>权威医疗顾问</h3>
-          <p>提供科学、客观的医疗建议，避免误诊或过度治疗</p>
-        </div>
-
-        <div class="value-card fade-in">
-          <div class="value-card-icon">
-            <i class="fa-solid fa-gauge-high"></i>
-          </div>
-          <h3>高效管理流程</h3>
-          <p>主动管理健康需求，避免不必要的就医奔波，节省宝贵时间</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       4. 服务亮点（9个，3x3网格）
-       ============================================ -->
-  <section class="section" id="services-highlight">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Service Highlights</div>
-        <h2 class="section-title">九大服务亮点</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">每一项服务，皆为您的极致健康体验而设计</p>
-      </div>
-
-      <div class="highlights-grid">
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-headset"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>VIP医疗管家服务</h4>
-            <p>配备专属医疗管家，精准掌控每个环节，让您无后顾之忧</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-infinity"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>家庭医生全年无限次问诊</h4>
-            <p>随时预约，全年不限次数，您的健康疑问永远不必等待</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-language"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>中英双语问诊报告</h4>
-            <p>专业详尽的双语报告，帮助您全面理解诊断结果与治疗建议</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-folder-open"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>建立专属医疗档案</h4>
-            <p>中英双语整理个人信息、家族病史、用药记录，终身维护</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>尊享绿色通道服务</h4>
-            <p>快速对接英国权威专科医生，免除漫长等待，分秒必争</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-clipboard-check"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>后续跟踪服务</h4>
-            <p>持续健康监测，量身定制个性化方案，康复之路从不孤单</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-crown"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>匹配英国皇家家庭医生</h4>
-            <p>精心匹配资深英国权威家庭医生，享受皇室同等医疗标准</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-hospital-user"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>英国中英双语医生陪诊服务</h4>
-            <p>实时陪诊翻译，确保沟通高效顺畅，绝无语言障碍</p>
-          </div>
-        </div>
-
-        <div class="highlight-card fade-in">
-          <div class="highlight-card-icon">
-            <i class="fa-solid fa-pills"></i>
-          </div>
-          <div class="highlight-card-content">
-            <h4>定制化及购药配送服务</h4>
-            <p>安排专属药品购买及配送，从处方到送达一站式服务</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       5. 卓越健康护航（6模块）
-       ============================================ -->
-  <section class="section bg-primary" id="escort" style="position:relative;overflow:hidden;">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle" style="color:var(--color-gold)">Health Escort</div>
-        <h2 class="section-title" style="color:var(--color-white)">卓越健康护航</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc" style="color:rgba(255,255,255,0.6)">顶尖医疗团队为您的健康保驾护航</p>
-      </div>
-
-      <div class="escort-grid">
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-stethoscope"></i>
-          </div>
-          <h4>全面健康评估与预防计划</h4>
-          <p>系统性健康筛查与风险评估，制定精准预防策略，防患于未然</p>
-        </div>
-
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-heart-pulse"></i>
-          </div>
-          <h4>卓越慢性病管理与持续监控</h4>
-          <p>专业团队持续跟踪慢性病指标，动态调整治疗方案，守护长期健康</p>
-        </div>
-
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-comments-dollar"></i>
-          </div>
-          <h4>专属健康顾问与高端咨询服务</h4>
-          <p>一对一健康顾问，随时解答疑虑，提供权威、客观的医疗建议</p>
-        </div>
-
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-people-group"></i>
-          </div>
-          <h4>与顶尖专科医生共管健康</h4>
-          <p>多学科专家联合管理，确保复杂健康问题获得全面、精准的诊疗</p>
-        </div>
-
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-spa"></i>
-          </div>
-          <h4>个性化健康指导与生活方式建议</h4>
-          <p>从饮食、运动到睡眠，量身定制生活方式优化方案，提升生命质量</p>
-        </div>
-
-        <div class="escort-card fade-in">
-          <div class="escort-card-icon">
-            <i class="fa-solid fa-brain"></i>
-          </div>
-          <h4>心理健康支持与管理</h4>
-          <p>关注身心平衡，提供专业心理评估与支持，守护您的全面健康</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       6. 服务流程（4步）
-       ============================================ -->
-  <section class="section bg-off-white" id="process">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Service Process</div>
-        <h2 class="section-title">服务流程</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">四步开启您的专属健康管理之旅</p>
-      </div>
-
-      <div class="process-flow">
-        <div class="process-flow-step fade-in">
-          <div class="process-flow-icon">
-            <i class="fa-solid fa-file-medical"></i>
-          </div>
-          <h4>建档</h4>
-          <p>建立专属中英双语医疗档案，全面记录健康状况与家族病史</p>
-        </div>
-
-        <div class="process-flow-step fade-in">
-          <div class="process-flow-icon">
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
-          </div>
-          <h4>评估</h4>
-          <p>皇家家庭医生进行深度健康评估，精准识别潜在风险</p>
-        </div>
-
-        <div class="process-flow-step fade-in">
-          <div class="process-flow-icon">
-            <i class="fa-solid fa-clipboard-list"></i>
-          </div>
-          <h4>管理</h4>
-          <p>制定个性化健康管理方案，全年无限次问诊与实时跟踪</p>
-        </div>
-
-        <div class="process-flow-step fade-in">
-          <div class="process-flow-icon">
-            <i class="fa-solid fa-rotate"></i>
-          </div>
-          <h4>随访</h4>
-          <p>持续监测与定期复查，动态优化方案，守护长效健康</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       7. 适合人群
-       ============================================ -->
-  <section class="section" id="audience">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">Who Is It For</div>
-        <h2 class="section-title">适合人群</h2>
-        <div class="gold-line"></div>
-        <p class="section-desc">为追求极致健康品质的您而设计</p>
-      </div>
-
-      <div class="audience-grid">
-        <div class="audience-card fade-in">
-          <div class="audience-card-icon">
-            <i class="fa-solid fa-gem"></i>
-          </div>
-          <h4>高净值家族 / 企业家</h4>
-          <p>时间是最珍贵的资产，专业团队为您高效管理健康</p>
-        </div>
-
-        <div class="audience-card fade-in">
-          <div class="audience-card-icon">
-            <i class="fa-solid fa-lock"></i>
-          </div>
-          <h4>对隐私和医疗品质<br>要求极高的人群</h4>
-          <p>GDPR标准保护，绝不泄露任何个人信息</p>
-        </div>
-
-        <div class="audience-card fade-in">
-          <div class="audience-card-icon">
-            <i class="fa-solid fa-handshake"></i>
-          </div>
-          <h4>希望建立长期健康<br>管理关系的人群</h4>
-          <p>不是一次性的问诊，而是终身的健康伙伴</p>
-        </div>
-
-        <div class="audience-card fade-in">
-          <div class="audience-card-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <h4>需要中英双语服务的<br>在华外籍/留学生家庭</h4>
-          <p>无语言障碍，中英双语全程陪同与报告</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       8. 常见问题 FAQ
-       ============================================ -->
-  <section class="section bg-off-white" id="faq">
-    <div class="container">
-      <div class="section-header fade-in">
-        <div class="section-subtitle">FAQ</div>
-        <h2 class="section-title">常见问题</h2>
-        <div class="gold-line"></div>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item active">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            私人医生是否真的来自英国皇室体系？
-            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
-          </div>
-          <div class="faq-answer" style="max-height:200px;">
-            <div class="faq-answer-inner">
-              是的。圣链健康领衔的私人医生确实来自英国皇室医疗体系，拥有为英国皇室成员服务的丰富经验。我们所有的家庭医生均经过严格筛选，必须是英国TOP10医疗机构的资深专家，且通过率不足3%。每一位专家均经皇室私医亲自审核确认。
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">01</span>
+              <h3>高端慢病管理</h3>
             </div>
+            <p>针对高血压、糖尿病、心血管疾病等慢性疾病，由专属私人医生制定个性化管理方案，结合英国顶级专科医生定期会诊，实现慢病精准管控。</p>
+            <ul class="svc-card-features">
+              <li>专属私人医生1对1管理</li>
+              <li>个性化用药与生活方式方案</li>
+              <li>英国专科医生定期远程会诊</li>
+              <li>全年健康数据追踪与调整</li>
+            </ul>
+            <a href="service-chronic.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
           </div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            全年无限次问诊是否包含线下就诊？
-            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+        <!-- Service 2 -->
+        <div class="svc-card animate-on-scroll delay-1">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-private-detail.jpg" alt="英国皇家家庭私人医生服务">
           </div>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              全年无限次问诊主要指线上视频问诊服务，您可随时通过我们的平台预约英国家庭医生进行远程会诊。如需线下赴英就诊，我们将为您安排VIP绿色通道，相关费用将根据具体服务内容另行说明。我们的医疗管家会全程协助您完成线下就诊的所有安排。
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">02</span>
+              <h3>皇家家庭私人医生</h3>
             </div>
+            <p>借鉴英国皇室私人医生模式，为您的家庭配备专属私人医生，提供7×24小时健康守护、就医协调、预防保健等全方位服务。</p>
+            <ul class="svc-card-features">
+              <li>英国皇室私人医生模式</li>
+              <li>7×24小时健康守护</li>
+              <li>全家健康管理覆盖</li>
+              <li>优先对接顶级医疗资源</li>
+            </ul>
+            <a href="service-private.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
           </div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            数据安全如何保障？
-            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+        <!-- Service 3 -->
+        <div class="svc-card animate-on-scroll delay-2">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-checkup-detail.jpg" alt="个性化体检定制服务">
           </div>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              我们严格遵循欧盟GDPR《通用数据保护条例》及中国数据安全法规，采用银行级AES-256位加密标准进行端到端数据传输。所有病历资料和问诊记录均加密存储，仅授权医疗团队可访问。数据管理流程与英国NHS同源同标，确保您的隐私安全无虞。
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">03</span>
+              <h3>个性化体检定制</h3>
             </div>
+            <p>根据个人健康史、家族病史及生活方式，由英国顶级全科医生量身定制体检方案，并提供详细的体检报告解读与健康规划建议。</p>
+            <ul class="svc-card-features">
+              <li>英国全科医生定制方案</li>
+              <li>深度健康风险评估</li>
+              <li>体检报告专业解读</li>
+              <li>后续健康管理规划</li>
+            </ul>
+            <a href="service-checkup.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
           </div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            服务是否覆盖我的家人？
-            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+        <!-- Service 4 -->
+        <div class="svc-card animate-on-scroll delay-3">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-student-detail.jpg" alt="留学生健康管家服务">
           </div>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              我们的至臻私人医疗服务支持家庭套餐，可覆盖配偶及未成年子女。每位家庭成员都将拥有独立的专属医疗档案和个性化健康管理方案。家庭医生会全面了解家族病史，为整个家庭提供更精准、更有前瞻性的健康管理服务。
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">04</span>
+              <h3>留学生健康管家</h3>
             </div>
+            <p>专为在英中国留学生打造，提供日常健康咨询、就医陪同、紧急医疗协调等服务，解决异国求医的语言与文化障碍。</p>
+            <ul class="svc-card-features">
+              <li>NHS就医全程导航</li>
+              <li>华人执业医生翻译陪同</li>
+              <li>紧急医疗快速响应</li>
+              <li>心理健康支持</li>
+            </ul>
+            <a href="service-student.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
           </div>
         </div>
-
-        <div class="faq-item">
-          <div class="faq-question" onclick="toggleFaq(this)">
-            如何收费？
-            <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+        <!-- Service 5 -->
+        <div class="svc-card animate-on-scroll delay-1">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-uk-treatment-detail.jpg" alt="赴英看病">
           </div>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              我们提供多种服务套餐，以年费制为基础，根据服务内容和覆盖人数有所不同。基础套餐包含全年无限次线上问诊、专属医疗管家、双语报告等核心服务；高级套餐则增加线下赴英绿色通道、陪诊服务等增值内容。具体费用请咨询您的专属医疗管家或预约免费咨询了解详情。
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">05</span>
+              <h3>赴英看病</h3>
             </div>
+            <p>为需要赴英就医的客户提供全程服务，包括医生匹配、医院预约、签证协助、行程安排、在地陪同翻译等，让您安心赴英。</p>
+            <ul class="svc-card-features">
+              <li>精准医生与医院匹配</li>
+              <li>签证与行程全程协助</li>
+              <li>华人执业医生陪同翻译</li>
+              <li>治疗后的康复跟踪</li>
+            </ul>
+            <a href="service-uk-treatment.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
+          </div>
+        </div>
+        <!-- Service 6 -->
+        <div class="svc-card animate-on-scroll delay-2">
+          <div class="svc-card-image">
+            <img loading="lazy" src="images/service-remote-detail.jpg" alt="远程问诊">
+          </div>
+          <div class="svc-card-body">
+            <div class="svc-card-header">
+              <span class="svc-card-num">06</span>
+              <h3>远程问诊</h3>
+            </div>
+            <p>足不出户即可与英国顶级医生进行视频问诊。所有医学翻译由当地执业华人医生担任，确保沟通精准无障碍。</p>
+            <ul class="svc-card-features">
+              <li>英国顶级医生视频问诊</li>
+              <li>执业华人医生专业翻译</li>
+              <li>病历整理与诊断报告</li>
+              <li>后续治疗方案跟进</li>
+            </ul>
+            <a href="service-remote.html" class="btn btn-outline-navy btn-sm">了解详情 →</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       9. 咨询转化区
-       ============================================ -->
-  <section class="cta-banner" id="cta">
+  <!-- Premium Concierge Services -->
+  <section class="section bg-off-white">
     <div class="container">
-      <h2 class="fade-in">开启您的专属<span style="color:var(--color-gold)">健康管理</span></h2>
-      <p class="fade-in">从今天起，让英国皇家标准的医疗团队为您和家人的健康保驾护航</p>
-      <div class="cta-banner-buttons fade-in">
-        <a href="../forms/consultation.html" class="btn btn-primary">免费咨询</a>
-        <a href="../forms/appointment.html" class="btn btn-outline">预约会诊</a>
+      <div class="section-title animate-on-scroll">
+        <span class="label">PREMIUM CONCIERGE SERVICES</span>
+        <h2>尊享<span>增值服务</span></h2>
+        <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        <p>为赴英就医客户提供一站式尊享出行与生活安排，让您的就医之旅全程无忧、尽享尊贵</p>
       </div>
-      <p class="cta-banner-note fade-in">
-        <i class="fa-solid fa-lock" style="margin-right:4px;"></i>
-        您的信息采用256位加密传输，仅用于医疗顾问联系您，严格遵循GDPR及中国数据安全法规。
-      </p>
+      <div class="concierge-grid">
+        <div class="concierge-card animate-on-scroll delay-1">
+          <div class="concierge-image">
+            <img loading="lazy" src="images/concierge-air-ambulance.jpg" alt="全球医疗专机包机">
+          </div>
+          <div class="concierge-card-body">
+            <div class="concierge-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+            </div>
+            <h4>全球医疗专机包机</h4>
+            <p>与全球顶级医疗专机运营商合作，提供配备专业医疗设备的专机包机服务，空中ICU级别监护，确保重症患者安全、舒适地抵达英国。</p>
+            <ul class="concierge-features">
+              <li>空中ICU级别医疗监护</li>
+              <li>全球范围出发覆盖</li>
+              <li>随行医护团队配备</li>
+            </ul>
+          </div>
+        </div>
+        <div class="concierge-card animate-on-scroll delay-2">
+          <div class="concierge-image">
+            <img loading="lazy" src="images/concierge-transport.jpg" alt="高级接送车服务">
+          </div>
+          <div class="concierge-card-body">
+            <div class="concierge-icon">
+              <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+            </div>
+            <h4>高级接送车服务</h4>
+            <p>提供英国当地高级轿车接送服务，专业司机、舒适座驾，从机场到医院、酒店到诊所，每一程都尊享安心与体面。</p>
+            <ul class="concierge-features">
+              <li>奔驰/宾利等高级座驾</li>
+              <li>专业双语司机服务</li>
+              <li>机场-医院-酒店全覆盖</li>
+            </ul>
+          </div>
+        </div>
+        <div class="concierge-card animate-on-scroll delay-3">
+          <div class="concierge-image">
+            <img loading="lazy" src="images/concierge-accommodation.jpg" alt="住宿预订">
+          </div>
+          <div class="concierge-card-body">
+            <div class="concierge-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 14c1.66 0 3-1.34 3-3S8.66 8 7 8s-3 1.34-3 3 1.34 3 3 3zm0-4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm12-3h-8v8H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+            </div>
+            <h4>住宿预订</h4>
+            <p>精选英国当地高端酒店及医疗公寓，毗邻顶级医院，为您和家人提供舒适便利的居住环境，安心治疗、舒心休养。</p>
+            <ul class="concierge-features">
+              <li>医院周边高端酒店优选</li>
+              <li>长住医疗公寓安排</li>
+              <li>特殊需求（无障碍等）定制</li>
+            </ul>
+          </div>
+        </div>
+        <div class="concierge-card animate-on-scroll delay-1">
+          <div class="concierge-image">
+            <img loading="lazy" src="images/concierge-visa.jpg" alt="英国签证快速通道">
+          </div>
+          <div class="concierge-card-body">
+            <div class="concierge-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </div>
+            <h4>英国签证快速通道</h4>
+            <p>与英国签证中心深度合作，为医疗客户提供签证加急办理通道，最快24小时内获批，确保就医行程不受签证延误影响。</p>
+            <ul class="concierge-features">
+              <li>医疗签证专属加急通道</li>
+              <li>签证材料专业指导</li>
+              <li>最快24小时获批</li>
+            </ul>
+          </div>
+        </div>
+        <div class="concierge-card animate-on-scroll delay-2">
+          <div class="concierge-image">
+            <img loading="lazy" src="images/concierge-customs.jpg" alt="海关快速通道">
+          </div>
+          <div class="concierge-card-body">
+            <div class="concierge-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            </div>
+            <h4>海关快速通道</h4>
+            <p>提供英国海关入境快速通道服务，专人协助通关，免去排队等候，抵达即可快速入境，为您的就医之旅节省宝贵时间。</p>
+            <ul class="concierge-features">
+              <li>专人协助快速通关</li>
+              <li>免去排队等候</li>
+              <li>特殊医疗物资申报协助</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============================================
-       10. 底部 Footer
-       ============================================ -->
-  <footer class="footer" id="footer">
+  <!-- CTA Section -->
+  <section class="cta-section cta-services">
     <div class="container">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <a href="../index.html" class="nav-logo">
-            <div class="nav-logo-icon">圣</div>
-            <span class="nav-logo-text">圣链健康</span>
-          </a>
-          <p>亚洲首家英式顶级医疗资源整合平台，2019年成立于伦敦与北京。以皇室级医疗资源，守护您的健康与尊严。</p>
-        </div>
-
-        <div class="footer-column">
-          <h4>核心服务</h4>
-          <a href="private-doctor.html">皇室私医</a>
-          <a href="expert-consultation.html">专家会诊</a>
-          <a href="prevention-plan.html">预防计划</a>
-          <a href="international-consultation.html">国际会诊</a>
-          <a href="second-opinion.html">第二诊疗意见</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>了解更多</h4>
-          <a href="../pages/about.html">关于我们</a>
-          <a href="../pages/service-model.html">服务模式</a>
-          <a href="../pages/process.html">服务流程</a>
-          <a href="../resources/experts.html">专家团队</a>
-          <a href="../resources/institutions.html">合作机构</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>联系方式</h4>
-          <a href="../forms/consultation.html">免费咨询</a>
-          <a href="../forms/appointment.html">预约会诊</a>
-          <a href="../forms/callback.html">申请回电</a>
-          <a href="mailto:contact@holychain-health.com">contact@holychain-health.com</a>
-          <a href="tel:+4420XXXXXXXX">+44 20 XXXX XXXX</a>
+      <div class="cta-content animate-on-scroll">
+        <h2>不确定哪项服务<span>适合您</span>？</h2>
+        <p>预约免费咨询，让我们的健康顾问为您推荐最合适的服务方案</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">预约免费咨询</a>
+          <a href="process.html" class="btn btn-outline btn-lg">了解问诊流程</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="footer-bottom">
-        <p>© 2024 圣链健康 HolyChain Health. All Rights Reserved.</p>
-        <div class="footer-bottom-links">
-          <a href="../pages/privacy.html">隐私政策</a>
-          <a href="../pages/terms.html">服务条款</a>
-          <a href="../pages/cookie.html">Cookie政策</a>
-        </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">A</div><span class="brand-text">ARKECT HEALTH</span></div><p>圣链健康成立于2019年，亚洲首家全球医疗精准匹配平台。</p></div>
+        <div class="footer-col"><h5>关于我们</h5><a href="about.html">公司简介</a><a href="resources.html">医疗资源</a><a href="cases.html">资讯分享</a></div>
+        <div class="footer-col"><h5>我们的服务</h5><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div>
+        <div class="footer-col"><h5>快速链接</h5><a href="process.html">问诊流程</a><a href="contact.html">联系我们</a></div>
+        <div class="footer-qr-group"><div class="footer-qr"><img loading="lazy" src="images/qrcode-official.png" alt="微信公众号"><span>微信公众号</span></div><div class="footer-qr"><img loading="lazy" src="images/qrcode-video.png" alt="视频号"><span>视频号</span></div></div>
       </div>
+      <div class="footer-locations">
+        <div class="footer-location"><div class="loc-flag">🇬🇧</div><div class="loc-info"><h6>伦敦总部</h6><p>London, UK<br>enquiries@arkect.co.uk</p></div></div>
+        <div class="footer-location"><div class="loc-flag">🇨🇳</div><div class="loc-info"><h6>北京总部</h6><p>Beijing, China<br>enquiries@arkect.co.uk</p></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2019-2026 Arkect Health 圣链健康. All Rights Reserved.</span><div class="footer-links"><a href="#">隐私政策</a><a href="#">数据保护</a><a href="#">使用条款</a></div></div>
     </div>
   </footer>
-
-  <!-- Scroll to Top -->
-  <div class="scroll-top" id="scrollTop">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"/>
-    </svg>
+  <div class="floating-consult">
+    <div class="floating-btn wechat"><svg viewBox="0 0 24 24"><path d="M8.5 11c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm5 0c.83 0 1.5-.67 1.5-1.5S14.33 8 13.5 8 12 8.67 12 9.5s.67 1.5 1.5 1.5zM12 2C6.48 2 2 5.94 2 10.73c0 3.07 1.76 5.77 4.49 7.37L5 21.5l4.47-2.27c.81.19 1.66.29 2.53.29 5.52 0 10-3.94 10-8.79S17.52 2 12 2z"/></svg><div class="wechat-popup">
+        <div class="popup-title">扫码联系圣链健康</div>
+        <div class="qr-grid">
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-official.png" alt="官方公众号" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4z"/></svg><span>公众号二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方公众号</strong>扫码关注</div>
+          </div>
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-service.png" alt="官方客服" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg><span>客服二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方客服</strong>扫码添加</div>
+          </div>
+        </div>
+      </div></div>
+    <a href="contact.html" class="floating-btn consult"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+    <div class="floating-btn top"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></div>
   </div>
-
-  <!-- Main JavaScript -->
-  <script src="../js/main.js"></script>
-
-  <!-- FAQ Toggle Script -->
-  <script>
-    function toggleFaq(el) {
-      const item = el.parentElement;
-      const answer = item.querySelector('.faq-answer');
-      const isActive = item.classList.contains('active');
-
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(function(faq) {
-        faq.classList.remove('active');
-        faq.querySelector('.faq-answer').style.maxHeight = null;
-      });
-
-      // Open clicked (if it was closed)
-      if (!isActive) {
-        item.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    }
-  </script>
-
+  <script src="js/main.js?v=20260903"></script>
 </body>
 </html>
