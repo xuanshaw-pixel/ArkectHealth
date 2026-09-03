@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跳转中… — 圣链健康</title>
+  <script>
+    /* 旧 URL article.html?id=xxx 兼容重定向 → consultation/xxx.html */
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get('id');
+      if (id) {
+        window.location.replace('../consultation/' + encodeURIComponent(id) + '.html');
+      } else {
+        window.location.replace('index.html');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p style="text-align:center;padding:80px 20px;font-family:sans-serif;color:#999;">正在跳转，请稍候…</p>
+</body>
+</html>

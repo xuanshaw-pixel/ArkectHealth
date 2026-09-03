@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资讯分享 - 圣链健康 Arkect Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-content"><div class="loader-spinner"></div><span>ARKECT HEALTH</span></div></div>
+  <nav class="navbar" data-transparent>
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">A</div>
+        
+          <span class="brand-en">ARKECT HEALTH</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">首页</a><a href="about.html">关于我们</a>
+        <div class="nav-dropdown"><a href="services.html">我们的服务</a><div class="dropdown-menu"><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div></div>
+        <a href="resources.html">医疗资源</a><a href="cases.html" class="active">资讯分享</a><a href="process.html">问诊流程</a><a href="contact.html" class="btn btn-primary btn-sm nav-cta">预约咨询</a><span class="nav-lang">EN</span>
+      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="background-image: url('images/cases-hero.jpg'); background-size: cover; background-position: center 60%; position:relative;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(10,30,61,0.82) 0%, rgba(10,30,61,0.65) 50%, rgba(19,45,94,0.55) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="breadcrumb"><a href="index.html">首页</a><span class="separator">/</span><span class="current">资讯分享</span></div>
+      <span class="label">INSIGHTS & STORIES</span>
+      <h1>资讯<span>分享</span></h1>
+      <p>康复纪实、前沿资讯、英伦医讯与医疗科普，一站式获取权威医疗信息</p>
+    </div>
+  </section>
+
+  <!-- Main Tab Navigation -->
+  <section class="section" style="padding-bottom:0; padding-top:48px;">
+    <div class="container">
+      <div class="insights-tabs animate-on-scroll">
+        <button class="insights-tab-btn active" data-tab="recovery">
+          <svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>
+          康复纪实
+        </button>
+        <button class="insights-tab-btn" data-tab="frontier">
+          <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+          医界前沿
+        </button>
+        <button class="insights-tab-btn" data-tab="uk-news">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+          英伦医讯
+        </button>
+        <button class="insights-tab-btn" data-tab="uk-knowledge">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          英伦医知
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TAB 1: 康复纪实（动态文章） ==================== -->
+  <div class="insights-tab-content active" id="tab-recovery">
+    <!-- Filter -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="case-filters animate-on-scroll" id="articleFilters-recovery">
+          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="case-grid" id="articlesGrid-recovery">
+          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-navy">
+      <div class="container">
+        <div class="section-title light animate-on-scroll">
+          <span class="label">TESTIMONIALS</span>
+          <h2>客户<span>心声</span></h2>
+          <div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card animate-on-scroll delay-1">
+            <div class="quote-mark">"</div>
+            <p>圣链健康帮我找到了最合适的英国专家，远程会诊给了我全新的治疗方案，避免了不必要的手术。翻译医生非常专业，沟通完全没有障碍。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">Z</div>
+              <div class="author-info"><strong>张先生</strong><span>肺癌患者 · 远程问诊</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll delay-2">
+            <div class="quote-mark">"</div>
+            <p>从签证到手术，圣链健康全程陪伴，让我们全家都非常安心。孩子在伦敦的治疗效果超出了我们的预期，感谢圣链健康的专业团队。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">L</div>
+              <div class="author-info"><strong>李女士</strong><span>患儿母亲 · 赴英看病</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card animate-on-scroll delay-3">
+            <div class="quote-mark">"</div>
+            <p>签约私人医生服务一年了，全家人的健康都有了保障。私人医生非常负责，每次咨询都很耐心，真正做到了'亚洲首家英式医疗资源整合平台'。</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">W</div>
+              <div class="author-info"><strong>王先生</strong><span>企业高管 · 私人医生服务</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 2: 医界前沿（动态文章） ==================== -->
+  <div class="insights-tab-content" id="tab-frontier">
+    <!-- Filter -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="case-filters animate-on-scroll" id="articleFilters-frontier">
+          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="case-grid" id="articlesGrid-frontier">
+          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 3: 英伦医讯（动态文章） ==================== -->
+  <div class="insights-tab-content" id="tab-uk-news">
+    <!-- Filter -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="case-filters animate-on-scroll" id="articleFilters-uk-news">
+          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="case-grid" id="articlesGrid-uk-news">
+          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== TAB 4: 英伦医知（动态文章） ==================== -->
+  <div class="insights-tab-content" id="tab-uk-knowledge">
+    <!-- Filter -->
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="case-filters animate-on-scroll" id="articleFilters-uk-knowledge">
+          <!-- 动态生成：由 cases-articles.js 根据 ARTICLES 数据填充 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="case-grid" id="articlesGrid-uk-knowledge">
+          <!-- 文章卡片由 cases-articles.js 动态渲染 -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="cta-section" style="background-image: url('images/cta-cases-bg.jpg'); background-size: cover; background-position: center 60%; position: relative;">
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg, rgba(10,30,61,0.88) 0%, rgba(10,30,61,0.75) 50%, rgba(19,45,94,0.65) 100%);z-index:1;"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="cta-content animate-on-scroll">
+        <h2>您也可以成为<span>下一个</span>成功案例</h2>
+        <p>立即预约咨询，让我们为您精准匹配最合适的英国顶级医生</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-primary btn-lg">预约免费咨询</a>
+          <a href="process.html" class="btn btn-outline btn-lg">了解问诊流程</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><div class="footer-logo"><div class="logo-icon">A</div><span class="brand-text">ARKECT HEALTH</span></div><p>圣链健康成立于2019年，亚洲首家全球医疗精准匹配平台。</p></div>
+        <div class="footer-col"><h5>关于我们</h5><a href="about.html">公司简介</a><a href="resources.html">医疗资源</a><a href="cases.html">资讯分享</a></div>
+        <div class="footer-col"><h5>我们的服务</h5><a href="service-chronic.html">高端慢病管理</a><a href="service-private.html">皇家私人医生</a><a href="service-checkup.html">个性化体检</a><a href="service-student.html">留学生健康管家</a><a href="service-uk-treatment.html">赴英看病</a><a href="service-remote.html">远程问诊</a></div>
+        <div class="footer-col"><h5>快速链接</h5><a href="process.html">问诊流程</a><a href="contact.html">联系我们</a></div>
+        <div class="footer-qr-group"><div class="footer-qr"><img loading="lazy" src="images/qrcode-official.png" alt="微信公众号"><span>微信公众号</span></div><div class="footer-qr"><img loading="lazy" src="images/qrcode-video.png" alt="视频号"><span>视频号</span></div></div>
+      </div>
+      <div class="footer-locations">
+        <div class="footer-location"><div class="loc-flag">🇬🇧</div><div class="loc-info"><h6>伦敦总部</h6><p>London, UK<br>enquiries@arkect.co.uk</p></div></div>
+        <div class="footer-location"><div class="loc-flag">🇨🇳</div><div class="loc-info"><h6>北京总部</h6><p>Beijing, China<br>enquiries@arkect.co.uk</p></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2019-2026 Arkect Health 圣链健康. All Rights Reserved.</span><div class="footer-links"><a href="#">隐私政策</a><a href="#">数据保护</a><a href="#">使用条款</a></div></div>
+    </div>
+  </footer>
+  <div class="floating-consult">
+    <div class="floating-btn wechat"><svg viewBox="0 0 24 24"><path d="M8.5 11c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm5 0c.83 0 1.5-.67 1.5-1.5S14.33 8 13.5 8 12 8.67 12 9.5s.67 1.5 1.5 1.5zM12 2C6.48 2 2 5.94 2 10.73c0 3.07 1.76 5.77 4.49 7.37L5 21.5l4.47-2.27c.81.19 1.66.29 2.53.29 5.52 0 10-3.94 10-8.79S17.52 2 12 2z"/></svg><div class="wechat-popup">
+        <div class="popup-title">扫码联系圣链健康</div>
+        <div class="qr-grid">
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-official.png" alt="官方公众号" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M3 11h8V3H3v8zm2-6h4v4H5V5zm8-2v8h8V3h-8zm6 6h-4V5h4v4zM3 21h8v-8H3v8zm2-6h4v4H5v-4z"/></svg><span>公众号二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方公众号</strong>扫码关注</div>
+          </div>
+          <div class="qr-item">
+            <div class="qr-box">
+              <img loading="lazy" src="images/qrcode-service.png" alt="官方客服" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="qr-placeholder" style="display:none;"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12zM7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg><span>客服二维码</span></div>
+            </div>
+            <div class="qr-label"><strong>官方客服</strong>扫码添加</div>
+          </div>
+        </div>
+      </div></div>
+    <a href="contact.html" class="floating-btn consult"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+    <div class="floating-btn top"><svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg></div>
+  </div>
+  <script src="js/articles-data.js"></script>
+  <script src="js/cases-articles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
